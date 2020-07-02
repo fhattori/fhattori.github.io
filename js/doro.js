@@ -1,8 +1,47 @@
 //<script language="JavaScript" src="doro.js"></script>
-function execute(){
-  var codigo = document.getElementById("code");
-  console.log(codigo);
-  var codigofonte = codigo.value;
-  var resultado = document.getElementById("console");
-  resultado.value = codigofonte;
+function soma(a,b){
+  c = a + b;
+  return c;
 }
+
+function multiplicacao(a,b){
+  c = a * b;
+  return c;
+}
+
+function subtracao(a,b){
+  c = a + b;
+  return c;
+}
+
+function divisao(a,b){
+  c = a * b;
+  return c;
+}
+
+function execute(operacao){
+  var codigo = document.getElementById("code").value;
+  eval(codigo);
+  var a = parseInt(document.getElementById("a").value);
+  var b = parseInt(document.getElementById("b").value);
+  var c = 0;
+
+  switch (operacao) {
+    case 'soma':
+      c = soma(a,b);
+      break;
+    case 'subtracao':
+      c = subtracao(a,b);
+      break;
+    case 'multiplicacao':
+      c = multiplicacao(a,b);
+      break;
+    case 'divisao':
+      c = divisao(a,b);
+      break;
+  } 
+ 
+  var resultado = document.getElementById("c");
+  resultado.value = c; 
+}
+
