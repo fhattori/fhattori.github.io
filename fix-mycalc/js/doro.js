@@ -10,12 +10,12 @@ function multiplicacao(a,b){
 }
 
 function subtracao(a,b){
-  c = a + b;
+  c = 0;
   return c;
 }
 
 function divisao(a,b){
-  c = a * b;
+  c = 0;
   return c;
 }
 
