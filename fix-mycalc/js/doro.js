@@ -19,6 +19,12 @@ function divisao(a,b){
   return c;
 }
 
+function desafio(a,b){
+  c = 0;
+  return c;
+}
+
+
 function execute(operacao){
   var codigo = document.getElementById("code").value;
   eval(codigo);
@@ -37,7 +43,10 @@ function execute(operacao){
       c = multiplicacao(a,b);
       break;
     case 'divisao':
-      c = divisao(a,b);
+      c = divisao(a,b);i
+      break;
+    case 'desafio':
+      c = desafio(a,b);
       break;
   } 
  
