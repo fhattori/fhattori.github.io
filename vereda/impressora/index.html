@@ -20,12 +20,10 @@ $(document).ready(function(){
   var width = $(window).width();
   var height = $(window).height();
 
-  console.log(height/36);
-  console.log(width/36);
-  for (var j=0; j<(height/36); j++){
+  for (var j=0; j<(height/72); j++){
     var linha = document.createElement("tr");
     $("table").append(linha);
-    for (var i=0; i<(width/36); i++){
+    for (var i=0; i<(width/72); i++){
       var celula = document.createElement("td");
       linha.append(celula);
     };
