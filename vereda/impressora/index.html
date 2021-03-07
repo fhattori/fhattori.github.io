@@ -1,0 +1,48 @@
+<!doctype html>
+<meta charset="utf-8"/>
+<head>
+<title> Impressora - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="binary.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<p><h1>Impressora</h1></p>
+
+<table>
+   &nbsp;
+</table>
+
+<script>
+$(document).ready(function(){
+  var width = $(window).width();
+  var height = $(window).height();
+
+  console.log(height/36);
+  console.log(width/36);
+  for (var j=0; j<(height/36); j++){
+    var linha = document.createElement("tr");
+    $("table").append(linha);
+    for (var i=0; i<(width/36); i++){
+      var celula = document.createElement("td");
+      linha.append(celula);
+    };
+  };
+
+  $("td").click(function(){
+    if( $(this).css("background-color") == "rgb(255, 255, 255)" ){
+       $(this).css("background-color", "black");
+    }
+    else if( $(this).css("background-color") == "rgba(0, 0, 0, 0)" ){
+       $(this).css("background-color", "black");
+    }
+    else if( $(this).css("background-color") == "rgb(0, 0, 0)" ){
+       $(this).css("background-color", "white");
+    }
+  });
+});
+</script>
+</body>
+</html>
