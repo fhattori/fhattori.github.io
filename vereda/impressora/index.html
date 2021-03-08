@@ -21,14 +21,19 @@ $(document).ready(function(){
   var height = $(window).height();
 
   var tamanho = (width/62);
+  var tamanho2 = (height/100);
 
   if (tamanho < 17){
     tamanho = 17;
   }
 
+  if (tamanho2 < 17){
+    tamanho = 17;
+  }
+
   $("table").css("width",tamanho*62);
 
-  for (var j=0; j<(height/100); j++){
+  for (var j=0; j<(tamanho2); j++){
     var linha = document.createElement("tr");
     $("table").append(linha);
     for (var i=0; i<tamanho; i++){
