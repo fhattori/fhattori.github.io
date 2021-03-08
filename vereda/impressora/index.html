@@ -20,10 +20,18 @@ $(document).ready(function(){
   var width = $(window).width();
   var height = $(window).height();
 
+  var tamanho = (width/62);
+
+  if (tamanho < 17){
+    tamanho = 17;
+  }
+
+  $("table").css("width",tamanho*62);
+
   for (var j=0; j<(height/100); j++){
     var linha = document.createElement("tr");
     $("table").append(linha);
-    for (var i=0; i<(width/72); i++){
+    for (var i=0; i<tamanho; i++){
       var celula = document.createElement("td");
       linha.append(celula);
     };
