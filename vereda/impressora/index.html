@@ -28,10 +28,11 @@ $(document).ready(function(){
   }
 
   if (tamanho2 < 17){
-    tamanho = 17;
+    tamanho2 = 17;
   }
 
   $("table").css("width",tamanho*62);
+  $("table").css("height",tamanho2*62);
 
   for (var j=0; j<(tamanho2); j++){
     var linha = document.createElement("tr");
