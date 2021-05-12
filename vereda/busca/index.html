@@ -1,0 +1,205 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Buscando - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="binary.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>1</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>2</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>3</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>4</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>5</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>6</h1>
+        </div>
+    </div>
+</div>
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>7</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>8</h1>
+        </div>
+    </div>
+</div>
+
+<br><br><br><br>
+<br><br><br><br>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>9</h1>
+        </div>
+    </div>
+</div>
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>10</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>11</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>12</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>13</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>14</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>15</h1>
+        </div>
+    </div>
+</div>
+
+<div class="f1_container">
+    <div class="shadow f1_card">
+        <div class="front face">
+            <img src="./branco.png" style="height: 120px; width: 120px;" />
+        </div>
+        <div class="back face center">
+            <h1>16</h1>
+        </div>
+    </div>
+</div>
+
+<script>
+$('.f1_container').click(function () {
+    $(this).toggleClass('active');
+});
+var allcards = document.getElementsByTagName("h1");
+console.log(allcards);
+console.log(allcards.length);
+
+for (const child of allcards) {
+  child.innerHTML = Math.floor(Math.random() * 20);
+}
+
+</script>
+</body>
+</html>
