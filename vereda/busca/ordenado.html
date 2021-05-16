@@ -193,6 +193,16 @@ $('.f1_container').click(function () {
     $(this).toggleClass('active');
 });
 
+var allcards = document.getElementsByTagName("h1");
+console.log(allcards);
+console.log(allcards.length);
+
+var primeiro = Math.floor(Math.random() * 6);
+
+for (const child of allcards) {
+  child.innerHTML = primeiro;
+  primeiro = primeiro + Math.floor(Math.random() * 4);
+}
 </script>
 </body>
 </html>
