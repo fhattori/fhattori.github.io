@@ -1,0 +1,95 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Programando - Prof Fernando Hattori </title>
+<link rel="stylesheet" href="menu.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<p><h1>Atividades de programação do personagem de minecraft</h1></p>
+
+<div class="container">
+  <a class="toggle-menu des" href="#">
+    <i></i>
+    <i></i>
+    <i></i>
+  </a>
+  <span class="des"><b> Atividade 0 (exemplo)</b></span>
+  <div class="menu-drawer">
+    <img style="width:100%; max-width:800px;" src="./at0.png"/>
+  </div>
+</div>
+
+<div class="container">
+  <a class="toggle-menu des" href="#">
+    <i></i>
+    <i></i>
+    <i></i>
+  </a>
+  <span class="des"><b>Atividade 1</b></span>
+  <div class="menu-drawer">
+    <img style="width:100%; max-width:800px;" src="./at1.png"/>
+  </div>
+</div>
+
+<div class="container">
+  <a class="toggle-menu des" href="#">
+    <i></i>
+    <i></i>
+    <i></i>
+  </a>
+  <span class="des"><b>Atividade 2</b></span>
+  <div class="menu-drawer">
+    <img style="width:100%; max-width:800px;" src="./at2.png"/>
+  </div>
+</div>
+
+<div class="container">
+  <a class="toggle-menu des" href="#">
+    <i></i>
+    <i></i>
+    <i></i>
+  </a>
+  <span class="des"><b>Atividade 3</b></span>
+  <div class="menu-drawer">
+    <img style="width:100%; max-width:800px;" src="./at3.png"/>
+  </div>
+</div>
+
+<div class="container">
+  <a class="toggle-menu des" href="#">
+    <i></i>
+    <i></i>
+    <i></i>
+  </a>
+  <span class="des"><b>Atividade 4</b></span>
+  <div class="menu-drawer">
+    <img style="width:100%; max-width:800px;" src="./at4.png"/>
+  </div>
+</div>
+
+<div class="container">
+  <a class="toggle-menu des" href="#">
+    <i></i>
+    <i></i>
+    <i></i>
+  </a>
+  <span class="des"><b>Atividade 5</b></span>
+  <div class="menu-drawer">
+    <img style="width:100%; max-width:800px;" src="./at5.png"/>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $(".des").click(function() {
+    $(this).parent().find(".toggle-menu").toggleClass("active");
+    $(this).parent().find(".menu-drawer").toggleClass("open");
+  });
+});
+</script>
+
+</body>
+</html>
