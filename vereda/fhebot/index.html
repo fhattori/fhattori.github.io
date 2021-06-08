@@ -1,0 +1,78 @@
+<!doctype html>
+<meta charset="utf-8"/>
+<head>
+<title> FheBot - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="binary.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script type="text/javascript" src="fhebot.js"></script>
+</head>
+<body>
+
+<p><h1>Fhebot</h1></p>
+
+<div class="row">
+
+  <div class="column col-4">
+    <h3 id="labelmapa">Mapa</h3>
+    <table id="mapa">
+      &nbsp;
+    </table>
+    <br>
+    <button type="button" id="btn-scene1">Cenário 1</button>
+    <button type="button" id="btn-scene2">Cenário 2</button>
+    <button type="button" id="btn-scene3">Cenário 3</button>
+    <button type="button" id="btn-scenerandom">Aleatório</button>
+    <br>
+    <br>
+    <table>
+      <tr><td></td><td><b>Legenda</b></td></tr>
+      <tr>
+      <td class="legenda fhebot"></td><td class="legenda2">Nosso robô (FheBot)</td>
+      </tr>
+      <tr>
+      <td class="legenda tree"></td><td class="legenda2">Árvores (não dá para passar)</td>
+      </tr>
+      <tr>
+      <td class="legenda gold"></td><td class="legenda2">Pedra preciosas (queremos todas)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="column col-4">
+    <h3><label for="story">Programação</label></h3>
+    <textarea id="story" readonly name="story" rows="15" cols="39">
+Clique nos botões de programação para escrever seu programa
+    </textarea>
+    <br>
+    <br>
+    <button type="button" id="btn-erase">Apagar</button>
+    <button type="button" id="btn-fromstart">Voltar ao início</button>
+    <button type="button" id="btn-run">Executar</button>
+    <br>
+    <br>
+  </div>
+
+  <div class="column col-2">
+    <h3>Botões de programação</h3>
+    <button type="button" id="btn-left">Mover para esquerda</button>
+    <br>
+    <br>
+    <button type="button" id="btn-right">Mover para direita</button>
+    <br>
+    <br>
+    <button type="button" id="btn-up">Mover para cima</button>
+    <br>
+    <br>
+    <button type="button" id="btn-down">Mover para baixo</button>
+    <br>
+    <br>
+    <button type="button" id="btn-loop">Repetir</button>
+    <br>
+    <br>
+  </div>
+
+</div>
+
+</body>
+</html>
