@@ -2,6 +2,9 @@ var programa = [];
 var fhelocal = [];
 var fhelocalstart = [];
 var gold = [];
+var emloop = false;
+var loopstartpoint = 0;
+var looptimes = 0;
 
 $(document).ready(function(){
   var width = $(window).width();
@@ -106,7 +109,11 @@ $(document).ready(function(){
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
     }
-    document.getElementById("story").innerHTML = codigo + "Mover para a esquerda"+'\r\n';
+    if(emloop){
+      document.getElementById("story").innerHTML = codigo + "  Mover para a esquerda"+'\r\n';
+    }else{
+      document.getElementById("story").innerHTML = codigo + "Mover para a esquerda"+'\r\n';
+    }
     programa.push('left');
   };
 
@@ -115,7 +122,11 @@ $(document).ready(function(){
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
     }
-    document.getElementById("story").innerHTML = codigo + "Mover para a direita"+'\r\n';
+    if(emloop){
+      document.getElementById("story").innerHTML = codigo + "  Mover para a direita"+'\r\n';
+    }else{
+      document.getElementById("story").innerHTML = codigo + "Mover para a direita"+'\r\n';
+    }
     programa.push('right');
   };
 
@@ -124,7 +135,11 @@ $(document).ready(function(){
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
     }
-    document.getElementById("story").innerHTML = codigo + "Mover para cima"+'\r\n';
+    if(emloop){
+      document.getElementById("story").innerHTML = codigo + "  Mover para cima"+'\r\n';
+    }else{
+      document.getElementById("story").innerHTML = codigo + "Mover para cima"+'\r\n';
+    }
     programa.push('up');
   };
 
@@ -133,51 +148,142 @@ $(document).ready(function(){
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
     }
-    document.getElementById("story").innerHTML = codigo + "Mover para baixo"+'\r\n';
+    if(emloop){
+      document.getElementById("story").innerHTML = codigo + "  Mover para baixo"+'\r\n';
+    }else{
+      document.getElementById("story").innerHTML = codigo + "Mover para baixo"+'\r\n';
+    }
     programa.push('down');
   };
 
-  document.getElementById('btn-run').onclick = function(){
-    programa.forEach(function (item, indice, array) {
-      var oldlocal = document.getElementById(fhelocal[0]+"-"+fhelocal[1]);
-      if(item == "left"){
-        if (fhelocal[1]-1 >= 0) {
-          var nextlocal = document.getElementById(fhelocal[0]+"-"+(parseInt(fhelocal[1],10)-1));
-          if (!(nextlocal.getAttribute("class")=="tree")){
-            nextlocal.setAttribute("class","fhebot");
-            oldlocal.setAttribute("class","empty");
-            fhelocal = [fhelocal[0],fhelocal[1]-1];
-          }
+  document.getElementById('btn-loop').onclick = function(){
+    var codigo = "";
+    if (!(document.getElementById("story").value.includes('botões'))){
+      codigo = document.getElementById("story").innerHTML;
+    }
+    if (emloop){
+      document.getElementById("story").innerHTML = codigo + "}"+'\r\n';
+      document.getElementById('btn-loop').removeAttribute("style");
+      programa.push('endloop');
+      document.getElementById('btn-loop').innerHTML = "Repetir";
+      emloop = false;
+    }else{
+      var x;
+      var repeticoes=prompt("Repetir quantas vezes?");
+      if (repeticoes!=null){
+        repeticoes = parseInt(repeticoes, 10);
+        if (!isNaN(repeticoes) && repeticoes > 0){
+          document.getElementById("story").innerHTML = codigo + "REPETIR "+repeticoes+" {"+'\r\n';
+          programa.push('startloop '+repeticoes);
+          document.getElementById('btn-loop').setAttribute("style","background-color: Tomato;");
+          document.getElementById('btn-loop').innerHTML = "Fim da repetição";
+          emloop = true;
+        }else{
+          alert("O número de repetições precisa ser um número maior que 0");
         }
-      }else if(item == "right"){
-        if (fhelocal[1]+1 < 10) {
-          var nextlocal = document.getElementById(fhelocal[0]+"-"+(parseInt(fhelocal[1],10)+1));
-          if (!(nextlocal.getAttribute("class")=="tree")){
-            nextlocal.setAttribute("class","fhebot");
-            oldlocal.setAttribute("class","empty");
-            fhelocal = [fhelocal[0],fhelocal[1]+1];
-          }
+      }
+    }
+  };
+
+  document.getElementById('btn-erase').onclick = function(){
+    if (!(document.getElementById("story").value.includes('botões'))){
+      var codigo = document.getElementById("story").innerHTML;
+      if(codigo.lastIndexOf("\n")>0) {
+        codigo = codigo.substring(0, codigo.lastIndexOf("\n"));
+        if(codigo.lastIndexOf("\n")>0) {
+          codigo = codigo.substring(0, codigo.lastIndexOf("\n")) + '\r\n';
+        }else if (codigo.lastIndexOf("\n")==-1) {
+          codigo = "Clique nos botões de programação para escrever seu programa";
         }
-      }else if(item == "up"){
-        if (fhelocal[0]-1 >= 0) {
-          var nextlocal = document.getElementById((parseInt(fhelocal[0],10)-1)+"-"+fhelocal[1]);
-          if (!(nextlocal.getAttribute("class")=="tree")){
-            nextlocal.setAttribute("class","fhebot");
-            oldlocal.setAttribute("class","empty");
-            fhelocal = [fhelocal[0]-1,fhelocal[1]];
+      }
+      document.getElementById("story").innerHTML = codigo;
+      var removido = programa.pop();
+      if(removido.includes("endloop")){
+        document.getElementById('btn-loop').setAttribute("style","background-color: Tomato;");
+        document.getElementById('btn-loop').innerHTML = "Fim da repetição";
+        emloop = true;
+      }else if (removido.includes("startloop")) {
+        document.getElementById('btn-loop').removeAttribute("style");
+        document.getElementById('btn-loop').innerHTML = "Repetir";
+        emloop = false;
+      }
+    }
+  };
+
+  document.getElementById('btn-fromstart').onclick = function(){
+    document.getElementById(fhelocal[0]+"-"+fhelocal[1]).setAttribute("class","empty");
+    document.getElementById(fhelocalstart[0]+"-"+fhelocalstart[1]).setAttribute("class","fhebot");
+    fhelocal = fhelocalstart;
+    gold.forEach(goldgoblin);
+  };
+
+  function executeSteps(pedacoPrograma){
+    setTimeout(frame, 400);
+    var i = 0;
+
+    function frame() {
+      if (i < pedacoPrograma.length){
+        var oldlocal = document.getElementById(fhelocal[0]+"-"+fhelocal[1]);
+        var item = pedacoPrograma[i];
+        i++;
+        if(item == "left"){
+          if (fhelocal[1]-1 >= 0) {
+            var nextlocal = document.getElementById(fhelocal[0]+"-"+(parseInt(fhelocal[1],10)-1));
+            if (!(nextlocal.getAttribute("class")=="tree")){
+              nextlocal.setAttribute("class","fhebot");
+              oldlocal.setAttribute("class","empty");
+              fhelocal = [fhelocal[0],fhelocal[1]-1];
+            }
           }
-        }
-      }else if(item == "down"){
-        if (fhelocal[0]+1 < 10) {
-          var nextlocal = document.getElementById((parseInt(fhelocal[0],10)+1)+"-"+fhelocal[1]);
-          if (!(nextlocal.getAttribute("class")=="tree")){
-            nextlocal.setAttribute("class","fhebot");
-            oldlocal.setAttribute("class","empty");
-            fhelocal = [fhelocal[0]+1,fhelocal[1]];
+        }else if(item == "right"){
+          if (fhelocal[1]+1 < 10) {
+            var nextlocal = document.getElementById(fhelocal[0]+"-"+(parseInt(fhelocal[1],10)+1));
+            if (!(nextlocal.getAttribute("class")=="tree")){
+              nextlocal.setAttribute("class","fhebot");
+              oldlocal.setAttribute("class","empty");
+              fhelocal = [fhelocal[0],fhelocal[1]+1];
+            }
+          }
+        }else if(item == "up"){
+          if (fhelocal[0]-1 >= 0) {
+            var nextlocal = document.getElementById((parseInt(fhelocal[0],10)-1)+"-"+fhelocal[1]);
+            if (!(nextlocal.getAttribute("class")=="tree")){
+              nextlocal.setAttribute("class","fhebot");
+              oldlocal.setAttribute("class","empty");
+              fhelocal = [fhelocal[0]-1,fhelocal[1]];
+            }
+          }
+        }else if(item == "down"){
+          if (fhelocal[0]+1 < 10) {
+            var nextlocal = document.getElementById((parseInt(fhelocal[0],10)+1)+"-"+fhelocal[1]);
+            if (!(nextlocal.getAttribute("class")=="tree")){
+              nextlocal.setAttribute("class","fhebot");
+              oldlocal.setAttribute("class","empty");
+              fhelocal = [fhelocal[0]+1,fhelocal[1]];
+            }
+          }
+        }else if(item.includes("startloop")){
+          loopstartpoint = i-1;
+          looptimes = parseInt(item.replace('startloop ',''),10);
+        }else if (item.includes("endloop")) {
+          looptimes = looptimes-1;
+          if (looptimes > 0){
+            i = loopstartpoint+1;
           }
         }
       }
-    });
+      setTimeout(frame, 400);
+    }
+  }
+
+  document.getElementById('btn-run').onclick = function(){
+    document.getElementById(fhelocal[0]+"-"+fhelocal[1]).setAttribute("class","empty");
+    document.getElementById(fhelocalstart[0]+"-"+fhelocalstart[1]).setAttribute("class","fhebot");
+    fhelocal = fhelocalstart;
+    gold.forEach(goldgoblin);
+
+    executeSteps(programa);
+
   };
 
   document.getElementById("btn-scene1").click();

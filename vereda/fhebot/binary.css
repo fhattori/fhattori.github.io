@@ -48,18 +48,28 @@ td{
 }
 
 .fhebot{
+  background-image: url("robot.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color:DarkRed;
 }
 
 .tree{
+  background-image: url("bush.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color:ForestGreen;
 }
 
 .gold{
+  background-image: url("diamond.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color:DarkTurquoise;
 }
 
 .empty{
+  background-image: none;
   background-color:white;
 }
 
