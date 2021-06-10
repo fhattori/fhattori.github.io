@@ -47,6 +47,10 @@ td{
   background-color: PeachPuff;
 }
 
+.gemas{
+  padding-left: 35px;
+}
+
 .fhebot{
   background-image: url("robot.png");
   background-repeat: no-repeat;

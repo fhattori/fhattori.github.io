@@ -5,6 +5,9 @@ var gold = [];
 var emloop = false;
 var loopstartpoint = 0;
 var looptimes = 0;
+var mytimeout;
+var stop = true;
+var ngemas = 0;
 
 $(document).ready(function(){
   var width = $(window).width();
@@ -56,6 +59,7 @@ $(document).ready(function(){
   }
 
   document.getElementById('btn-scene1').onclick = function(){
+    stop = true;
     limpeza();
     document.getElementById("1-1").setAttribute("class","fhebot");
     var trees = ["1-2","1-3","3-4","5-6","0-0","0-1","1-4","1-3","3-5","4-4",
@@ -70,6 +74,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-scene2').onclick = function(){
+    stop = true;
     limpeza();
     document.getElementById("1-9").setAttribute("class","fhebot");
     var trees = ["1-2","1-3","3-4","5-6","0-0","0-1","1-4","1-3","3-5","4-4",
@@ -84,6 +89,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-scene3').onclick = function(){
+    stop = true;
     limpeza();
     document.getElementById("0-5").setAttribute("class","fhebot");
     var trees = ["1-6","1-3","3-4","5-6","0-0","0-1","1-4","1-3","3-5","4-4",
@@ -98,6 +104,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-scenerandom').onclick = function(){
+    stop = true;
     random();
     fhelocal = [1,1];
     fhelocalstart = [1,1];
@@ -105,6 +112,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-left').onclick = function(){
+    stop = true;
     var codigo = "";
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
@@ -118,6 +126,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-right').onclick = function(){
+    stop = true;
     var codigo = "";
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
@@ -131,6 +140,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-up').onclick = function(){
+    stop = true;
     var codigo = "";
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
@@ -144,6 +154,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-down').onclick = function(){
+    stop = true;
     var codigo = "";
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
@@ -157,6 +168,7 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-loop').onclick = function(){
+    stop = true;
     var codigo = "";
     if (!(document.getElementById("story").value.includes('botões'))){
       codigo = document.getElementById("story").innerHTML;
@@ -185,7 +197,20 @@ $(document).ready(function(){
     }
   };
 
+  document.getElementById('btn-eraseall').onclick = function(){
+    stop = true;
+    document.getElementById(fhelocal[0]+"-"+fhelocal[1]).setAttribute("class","empty");
+    document.getElementById(fhelocalstart[0]+"-"+fhelocalstart[1]).setAttribute("class","fhebot");
+    fhelocal = fhelocalstart;
+    gold.forEach(goldgoblin);
+    ngemas = 0;
+    document.getElementById('numgemas').innerHTML = ngemas;
+    programa = [];
+    document.getElementById("story").innerHTML = "Clique nos botões de programação para escrever seu programa";
+  };
+
   document.getElementById('btn-erase').onclick = function(){
+    stop = true;
     if (!(document.getElementById("story").value.includes('botões'))){
       var codigo = document.getElementById("story").innerHTML;
       if(codigo.lastIndexOf("\n")>0) {
@@ -211,18 +236,22 @@ $(document).ready(function(){
   };
 
   document.getElementById('btn-fromstart').onclick = function(){
+    stop = true;
     document.getElementById(fhelocal[0]+"-"+fhelocal[1]).setAttribute("class","empty");
     document.getElementById(fhelocalstart[0]+"-"+fhelocalstart[1]).setAttribute("class","fhebot");
     fhelocal = fhelocalstart;
     gold.forEach(goldgoblin);
+    ngemas = 0;
+    document.getElementById('numgemas').innerHTML = ngemas;
   };
 
   function executeSteps(pedacoPrograma){
-    setTimeout(frame, 400);
     var i = 0;
-
+    mytimeout = setTimeout(frame, 300);
     function frame() {
-      if (i < pedacoPrograma.length){
+      if (stop) {
+        clearTimeout(mytimeout);
+      }else if (i < pedacoPrograma.length){
         var oldlocal = document.getElementById(fhelocal[0]+"-"+fhelocal[1]);
         var item = pedacoPrograma[i];
         i++;
@@ -230,6 +259,10 @@ $(document).ready(function(){
           if (fhelocal[1]-1 >= 0) {
             var nextlocal = document.getElementById(fhelocal[0]+"-"+(parseInt(fhelocal[1],10)-1));
             if (!(nextlocal.getAttribute("class")=="tree")){
+              if (nextlocal.getAttribute("class")=="gold"){
+                ngemas++;
+                document.getElementById('numgemas').innerHTML = ngemas;
+              }
               nextlocal.setAttribute("class","fhebot");
               oldlocal.setAttribute("class","empty");
               fhelocal = [fhelocal[0],fhelocal[1]-1];
@@ -239,6 +272,10 @@ $(document).ready(function(){
           if (fhelocal[1]+1 < 10) {
             var nextlocal = document.getElementById(fhelocal[0]+"-"+(parseInt(fhelocal[1],10)+1));
             if (!(nextlocal.getAttribute("class")=="tree")){
+              if (nextlocal.getAttribute("class")=="gold"){
+                ngemas++;
+                document.getElementById('numgemas').innerHTML = ngemas;
+              }
               nextlocal.setAttribute("class","fhebot");
               oldlocal.setAttribute("class","empty");
               fhelocal = [fhelocal[0],fhelocal[1]+1];
@@ -248,6 +285,10 @@ $(document).ready(function(){
           if (fhelocal[0]-1 >= 0) {
             var nextlocal = document.getElementById((parseInt(fhelocal[0],10)-1)+"-"+fhelocal[1]);
             if (!(nextlocal.getAttribute("class")=="tree")){
+              if (nextlocal.getAttribute("class")=="gold"){
+                ngemas++;
+                document.getElementById('numgemas').innerHTML = ngemas;
+              }
               nextlocal.setAttribute("class","fhebot");
               oldlocal.setAttribute("class","empty");
               fhelocal = [fhelocal[0]-1,fhelocal[1]];
@@ -257,6 +298,10 @@ $(document).ready(function(){
           if (fhelocal[0]+1 < 10) {
             var nextlocal = document.getElementById((parseInt(fhelocal[0],10)+1)+"-"+fhelocal[1]);
             if (!(nextlocal.getAttribute("class")=="tree")){
+              if (nextlocal.getAttribute("class")=="gold"){
+                ngemas++;
+                document.getElementById('numgemas').innerHTML = ngemas;
+              }
               nextlocal.setAttribute("class","fhebot");
               oldlocal.setAttribute("class","empty");
               fhelocal = [fhelocal[0]+1,fhelocal[1]];
@@ -271,8 +316,11 @@ $(document).ready(function(){
             i = loopstartpoint+1;
           }
         }
+        setTimeout(frame, 300);
+      }else if(i == pedacoPrograma.length){
+        stop = true;
       }
-      setTimeout(frame, 400);
+      clearTimeout(mytimeout);
     }
   }
 
@@ -281,9 +329,10 @@ $(document).ready(function(){
     document.getElementById(fhelocalstart[0]+"-"+fhelocalstart[1]).setAttribute("class","fhebot");
     fhelocal = fhelocalstart;
     gold.forEach(goldgoblin);
-
+    ngemas = 0;
+    document.getElementById('numgemas').innerHTML = ngemas;
+    stop = false;
     executeSteps(programa);
-
   };
 
   document.getElementById("btn-scene1").click();
