@@ -43,11 +43,13 @@ $(document).ready(function(){
   }
 
   function random(){
+    gold = [];
     for (var j=0; j<10; j++){
       for (var i=0; i<10; i++){
         var aler = Math.random()*10;
         if (aler < 0.5){
           document.getElementById(j+"-"+i).setAttribute("class","gold");
+          gold.push(j+"-"+i);
         }else if (aler < 2.5) {
           document.getElementById(j+"-"+i).setAttribute("class","tree");
         }else{
@@ -101,6 +103,80 @@ $(document).ready(function(){
     fhelocal = [0,5];
     fhelocalstart = [0,5];
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 3";
+  };
+
+  document.getElementById('btn-scene4').onclick = function(){
+    stop = true;
+    limpeza();
+    document.getElementById("1-1").setAttribute("class","fhebot");
+    var trees = ["1-2","1-3","3-4","5-6","0-0","0-1","1-4","1-3","3-5",
+    "4-5","4-6","4-7","5-1","5-0","5-2","7-2","7-4","7-8","7-9","2-8","2-9","8-1",
+"8-2","9-9","9-4"];
+    trees.forEach(exercitobrasileiro);
+    gold = ["2-2","3-3","4-4","5-5","6-6","7-7"];
+    gold.forEach(goldgoblin);
+    fhelocal = [0,5];
+    fhelocalstart = [0,5];
+    document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 4";
+  };
+
+  document.getElementById('btn-scene5').onclick = function(){
+    stop = true;
+    limpeza();
+    document.getElementById("1-1").setAttribute("class","fhebot");
+    var trees = ["1-2","1-3","3-4","5-6","0-0","0-1","1-4","1-3","3-5",
+    "4-5","4-6","4-7","5-1","5-0","5-2","7-2","7-4","7-8","7-9","2-8","2-9","8-1",
+"8-2","9-9","9-4"];
+    trees.forEach(exercitobrasileiro);
+    gold = ["3-3","5-5","7-7"];
+    gold.forEach(goldgoblin);
+    fhelocal = [0,5];
+    fhelocalstart = [0,5];
+    document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 5";
+  };
+
+  document.getElementById('btn-scene6').onclick = function(){
+    stop = true;
+    limpeza();
+    document.getElementById("1-1").setAttribute("class","fhebot");
+    var trees = ["1-2","1-3","3-4","5-6","0-0","0-1","1-4","1-3","3-5",
+    "4-5","4-6","4-7","5-1","5-0","5-2","7-2","7-4","7-8","7-9","2-8","2-9","8-1",
+"8-2","9-9","9-4"];
+    trees.forEach(exercitobrasileiro);
+    gold = ["3-3","5-3","5-5","7-5","7-7"];
+    gold.forEach(goldgoblin);
+    fhelocal = [0,5];
+    fhelocalstart = [0,5];
+    document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 6";
+  };
+
+  document.getElementById('btn-scene7').onclick = function(){
+    stop = true;
+    limpeza();
+    document.getElementById("1-1").setAttribute("class","fhebot");
+    var trees = ["1-2","1-3","3-2","3-4","5-4","5-6","0-0","0-1","1-4","1-3","3-5",
+    "4-6","4-7","5-1","5-0","5-2","7-2","7-4","7-8","7-9","2-8","2-9","8-1",
+    "8-2","9-9","9-4"];
+    trees.forEach(exercitobrasileiro);
+    gold = ["2-2","3-3","4-4","5-5","6-6","7-7"];
+    gold.forEach(goldgoblin);
+    fhelocal = [0,5];
+    fhelocalstart = [0,5];
+    document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 7";
+  };
+  document.getElementById('btn-scene8').onclick = function(){
+    stop = true;
+    limpeza();
+    document.getElementById("1-1").setAttribute("class","fhebot");
+    var trees = ["1-2","1-3","3-2","3-4","5-4","5-6","0-0","0-1","1-4","1-3","3-5",
+    "4-6","4-7","5-1","5-0","5-2","7-2","7-4","7-8","7-9","2-8","2-9","8-1",
+    "8-2","9-9","9-4"];
+    trees.forEach(exercitobrasileiro);
+    gold = ["3-3","4-4","6-6","7-7"];
+    gold.forEach(goldgoblin);
+    fhelocal = [0,5];
+    fhelocalstart = [0,5];
+    document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 8";
   };
 
   document.getElementById('btn-scenerandom').onclick = function(){
@@ -207,6 +283,10 @@ $(document).ready(function(){
     document.getElementById('numgemas').innerHTML = ngemas;
     programa = [];
     document.getElementById("story").innerHTML = "Clique nos botões de programação para escrever seu programa";
+
+    document.getElementById('btn-loop').removeAttribute("style");
+    document.getElementById('btn-loop').innerHTML = "Repetir";
+    emloop = false;
   };
 
   document.getElementById('btn-erase').onclick = function(){
@@ -251,6 +331,7 @@ $(document).ready(function(){
     function frame() {
       if (stop) {
         clearTimeout(mytimeout);
+        document.getElementById('btn-run').removeAttribute("disabled");
       }else if (i < pedacoPrograma.length){
         var oldlocal = document.getElementById(fhelocal[0]+"-"+fhelocal[1]);
         var item = pedacoPrograma[i];
@@ -319,6 +400,7 @@ $(document).ready(function(){
         setTimeout(frame, 300);
       }else if(i == pedacoPrograma.length){
         stop = true;
+        document.getElementById('btn-run').removeAttribute("disabled");
       }
       clearTimeout(mytimeout);
     }
@@ -331,6 +413,7 @@ $(document).ready(function(){
     gold.forEach(goldgoblin);
     ngemas = 0;
     document.getElementById('numgemas').innerHTML = ngemas;
+    document.getElementById('btn-run').setAttribute("disabled", "true");
     stop = false;
     executeSteps(programa);
   };
