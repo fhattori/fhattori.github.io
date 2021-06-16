@@ -115,8 +115,8 @@ $(document).ready(function(){
     trees.forEach(exercitobrasileiro);
     gold = ["2-2","3-3","4-4","5-5","6-6","7-7"];
     gold.forEach(goldgoblin);
-    fhelocal = [0,5];
-    fhelocalstart = [0,5];
+    fhelocal = [1,1];
+    fhelocalstart = [1,1];
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 4";
   };
 
@@ -130,8 +130,8 @@ $(document).ready(function(){
     trees.forEach(exercitobrasileiro);
     gold = ["3-3","5-5","7-7"];
     gold.forEach(goldgoblin);
-    fhelocal = [0,5];
-    fhelocalstart = [0,5];
+    fhelocal = [1,1];
+    fhelocalstart = [1,1];
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 5";
   };
 
@@ -145,8 +145,8 @@ $(document).ready(function(){
     trees.forEach(exercitobrasileiro);
     gold = ["3-3","5-3","5-5","7-5","7-7"];
     gold.forEach(goldgoblin);
-    fhelocal = [0,5];
-    fhelocalstart = [0,5];
+    fhelocal = [1,1];
+    fhelocalstart = [1,1];
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 6";
   };
 
@@ -160,8 +160,8 @@ $(document).ready(function(){
     trees.forEach(exercitobrasileiro);
     gold = ["2-2","3-3","4-4","5-5","6-6","7-7"];
     gold.forEach(goldgoblin);
-    fhelocal = [0,5];
-    fhelocalstart = [0,5];
+    fhelocal = [1,1];
+    fhelocalstart = [1,1];
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 7";
   };
   document.getElementById('btn-scene8').onclick = function(){
@@ -174,8 +174,8 @@ $(document).ready(function(){
     trees.forEach(exercitobrasileiro);
     gold = ["3-3","4-4","6-6","7-7"];
     gold.forEach(goldgoblin);
-    fhelocal = [0,5];
-    fhelocalstart = [0,5];
+    fhelocal = [1,1];
+    fhelocalstart = [1,1];
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 8";
   };
 
