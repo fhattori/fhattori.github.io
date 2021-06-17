@@ -8,6 +8,7 @@ var looptimes = 0;
 var mytimeout;
 var stop = true;
 var ngemas = 0;
+var nlinhas = 0;
 
 $(document).ready(function(){
   var width = $(window).width();
@@ -260,6 +261,8 @@ $(document).ready(function(){
       document.getElementById("story").innerHTML = codigo + "Mover para a esquerda"+'\r\n';
     }
     programa.push('left');
+    nlinhas++;
+    document.getElementById('numlinhas').innerHTML = nlinhas;
   };
 
   document.getElementById('btn-right').onclick = function(){
@@ -274,6 +277,8 @@ $(document).ready(function(){
       document.getElementById("story").innerHTML = codigo + "Mover para a direita"+'\r\n';
     }
     programa.push('right');
+    nlinhas++;
+    document.getElementById('numlinhas').innerHTML = nlinhas;
   };
 
   document.getElementById('btn-up').onclick = function(){
@@ -288,6 +293,8 @@ $(document).ready(function(){
       document.getElementById("story").innerHTML = codigo + "Mover para cima"+'\r\n';
     }
     programa.push('up');
+    nlinhas++;
+    document.getElementById('numlinhas').innerHTML = nlinhas;
   };
 
   document.getElementById('btn-down').onclick = function(){
@@ -302,6 +309,8 @@ $(document).ready(function(){
       document.getElementById("story").innerHTML = codigo + "Mover para baixo"+'\r\n';
     }
     programa.push('down');
+    nlinhas++;
+    document.getElementById('numlinhas').innerHTML = nlinhas;
   };
 
   document.getElementById('btn-loop').onclick = function(){
@@ -316,6 +325,8 @@ $(document).ready(function(){
       programa.push('endloop');
       document.getElementById('btn-loop').innerHTML = "Repetir";
       emloop = false;
+      nlinhas++;
+      document.getElementById('numlinhas').innerHTML = nlinhas;
     }else{
       var x;
       var repeticoes=prompt("Repetir quantas vezes?");
@@ -327,6 +338,8 @@ $(document).ready(function(){
           document.getElementById('btn-loop').setAttribute("style","background-color: Tomato;");
           document.getElementById('btn-loop').innerHTML = "Fim da repetição";
           emloop = true;
+          nlinhas++;
+          document.getElementById('numlinhas').innerHTML = nlinhas;
         }else{
           alert("O número de repetições precisa ser um número maior que 0");
         }
@@ -342,6 +355,8 @@ $(document).ready(function(){
     gold.forEach(goldgoblin);
     ngemas = 0;
     document.getElementById('numgemas').innerHTML = ngemas;
+    nlinhas = 0;
+    document.getElementById('numlinhas').innerHTML = nlinhas;
     programa = [];
     document.getElementById("story").innerHTML = "Clique nos botões de programação para escrever seu programa";
 
@@ -364,6 +379,8 @@ $(document).ready(function(){
       }
       document.getElementById("story").innerHTML = codigo;
       var removido = programa.pop();
+      nlinhas--;
+      document.getElementById('numlinhas').innerHTML = nlinhas;
       if(removido.includes("endloop")){
         document.getElementById('btn-loop').setAttribute("style","background-color: Tomato;");
         document.getElementById('btn-loop').innerHTML = "Fim da repetição";
