@@ -225,6 +225,21 @@ $(document).ready(function(){
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 11";
   };
 
+  document.getElementById('btn-scene12').onclick = function(){
+    stop = true;
+    limpeza();
+    document.getElementById("3-4").setAttribute("class","fhebot");
+    var trees = ["1-0","0-4","1-3","1-4","1-5","1-6","2-0","2-1","2-6","3-1",
+    "3-6","3-7","3-8","5-1","5-3","5-4","5-5","5-6","5-7","6-0","6-1","6-7",
+    "7-5","7-6","7-7","8-1","8-2","8-5","9-2","9-3","9-4"];
+    trees.forEach(exercitobrasileiro);
+    gold = ["0-0","0-5","0-9","3-0","5-0","7-3"];
+    gold.forEach(goldgoblin);
+    fhelocal = [3,4];
+    fhelocalstart = [3,4];
+    document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 12";
+  };
+
   document.getElementById('btn-scenerandom').onclick = function(){
     stop = true;
     random();
