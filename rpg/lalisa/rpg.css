@@ -49,7 +49,16 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;
-  max-width: 600px;
+  max-width: 570px;
+}
+
+.content{
+  font-family:arial;
+  margin-left: 30px;
+}
+
+.des{
+  font-weight: bold;
 }
 
 .escola{
@@ -61,6 +70,7 @@
 }
 
 .menu-drawer {
+  font-family: serif;
   background-color: #f2f2f2;
   top: 0;
   transition: up linear .2s;
@@ -78,7 +88,6 @@
 }
 
 .menu-drawer {
-  font-family:courier;
   li {
     font-weight: bold;
     margin-bottom: 30px;
