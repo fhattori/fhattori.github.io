@@ -52,6 +52,10 @@
   max-width: 570px;
 }
 
+body{
+  font-family:arial;
+}
+
 .content{
   font-family:arial;
   margin-left: 30px;
