@@ -4,28 +4,116 @@
 <title> Lalisa</title>
 
 <link rel="stylesheet" href="rpg.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
 
-<p><h1><a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a></h1></p>
+<div class="row2">
+  <div class="innercolumn2">
+    <a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a>
+  </div>
+  <div class="innercolumn4" onclick="displaySpell('pericias')">
+    <h4 class="stats">LVL: 3 &nbsp;&nbsp; CD 17 &nbsp; CA 14 </h4>
+    <h4 class="stats">PM 22 &nbsp; PV 18</h4>
+  </div>
+</div>
 
-<p><h3>Magias</h3></p>
+<div class="column">
+  <div class="row2">
+    <div class="innercolumn2">
+      <p><h3>&nbsp;</h3></p>
+    </div>
+    <div class="innercolumn3" onclick="displaySpell('pericias')">
+      <p><h3>Perícias</h3></p>
+    </div>
+  </div>
+<div class="row">
 
-<div class="content">
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
-  <span class="des" title="2d6+pasmo. Vontade (metade do dano)">Adaga Mental</span>
-  <div class="menu-drawer">
-    <span class="escola">Arcana 1 (Encantamento)</span>
+  <div class="innercolumn" onclick="displaySpell('adagamental')">
+    <span class="des-dmg">Adaga Mental</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('armaduraarcana')">
+    <span class="des-bless">Armadura Arcana</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('armaduraalihanna')">
+    <span class="des-bless">Armadura de Allihanna</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('bencao')">
+    <span class="des-bless">Benção</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('cariciasombria')">
+    <span class="des-dmg">Carícia Sombria (Tenebra)</span>
+  </div>
+
+<!--
+  <div class="innercolumn">
+    <span class="des" onclick="displaySpell('comando')">Comando</span>
+  </div>
+-->
+  <div class="innercolumn" onclick="displaySpell('controlarplantas')">
+    <span class="des-ctrl">Controlar Plantas</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('raioarcano')">
+    <span class="des-dmg">Raio Arcano</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('setainfalivel')">
+    <span class="des-dmg">Seta Infalível de Talude</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('sono')">
+    <span class="des-ctrl">Sono</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('culturaexotica')">
+    <span class="des minor">Cultura Exótica</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('empatiaselvagem')">
+    <span class="des minor">Empatia Selvagem</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('lembrancasgraduais')">
+    <span class="des minor">Lembranças Graduais</span>
+  </div>
+
+</div>
+</div>
+
+<div class="column2" id="descri">
+
+</div>
+
+<div class="hidden" id="pericias">
+  <span class="des">Perícias</span>
+  <p>Iniciativa <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Percepção <input type="text" class="text-pericias" value="!r 1d20+2" onclick="clicktextbox(this);" readonly></p>
+  <p>Acrobacia <input type="text" class="text-pericias" value="!r 1d20+3" onclick="clicktextbox(this);" readonly></p>
+  <!--<p>Atletismo <input type="text" class="text-pericias" value="!r 1d20+1" onclick="clicktextbox(this);" readonly></p>-->
+  <!--<p>Cura <input type="text" class="text-pericias" value="!r 1d20+2" onclick="clicktextbox(this);" readonly></p>-->
+  <p>Diplomacia <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Enganação <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Intimidação <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Misticismo <input type="text" class="text-pericias" value="!r 1d20+3" onclick="clicktextbox(this);" readonly></p>
+  <!--<p>Pontaria <input type="text" class="text-pericias" value="!r 1d20+3" onclick="clicktextbox(this);" readonly></p>-->
+  <p>Reflexos <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Sobrevivência <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+  <p>Vontade <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+</div>
+
+<div class="hidden" id="adagamental">
+<span class="des" title="2d6+pasmo. Vontade (metade do dano)">Adaga Mental</span>
+<p><span class="escola">Arcana 1 (Encantamento)</span></p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> curto;
 <b>Alvo:</b> 1 criatura; <b>Duração:</b> instantânea;
 <b>Resistência:</b> Vontade parcial.</p>
+<input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
 <p>Você manifesta e dispara uma adaga
 imaterial contra a mente do alvo, que
 sofre 2d6 pontos de dano mental e fica
@@ -43,18 +131,11 @@ na mente do alvo. Enquanto a magia
 durar, você sabe a direção e localização
 do alvo, desde que ele esteja no mesmo mundo.</p>
 <p>+2 PM: aumenta o dano em +1d6.</p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
+<div class="hidden" id="armaduraarcana">
   <span class="des" title="+4 de defesa">Armadura Arcana</span>
-  <div class="menu-drawer">
-    <span class="escola">Arcana 1 (Abjuração)</span>
+    <p><span class="escola">Arcana 1 (Abjuração)</span></p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> pessoal;
 <b>Alvo:</b> você; <b>Duração:</b> cena.</p>
 <p>Esta magia cria uma película protetora invisível, mas tangível, fornecendo
@@ -65,18 +146,27 @@ Em vez do normal, você cria um escudo mágico que fornece +6 na Defesa
 contra o próximo ataque que sofrer até o fim do turno atual.</p>
 <p>+2 PM: aumenta o bônus na Defesa em +1.</p>
 <p>+2 PM: muda a duração para 1 dia. Requer 2º círculo.</p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
+<div class="hidden" id="bencao">
+  <span class="des" title="+1 ataque e dano">Benção</span>
+    <p><span class="escola">Divina 1 (Encantamento)</span></p>
+<p><b>Execução:</b> padrão; <b>Alcance:</b> curto;
+<b>Alvo:</b> criaturas escolhidas;
+<b>Duração:</b> cena;
+<p>Abençoa os alvos, que recebem +1 em
+testes de ataque e rolagens de dano.
+Bênção anula Perdição.</p>
+<p>+1 PM: muda o alvo para 1 cadáver e a
+duração para 1 semana. O cadáver não se
+decompõe nem pode ser transformado
+em morto-vivo pela duração da magia.</p>
+<p>+2 PM: aumenta os bônus em +1, limitado pelo círculo máximo de magia
+que você pode lançar.</p>
+
+<div class="hidden" id="comando">
   <span class="des" title="fuja, largue, pare, senta ou venha">Comando</span>
-  <div class="menu-drawer">
-    <span class="escola">Divina 1 (Encantamento)</span>
+    <p><span class="escola">Divina 1 (Encantamento)</span></p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> curto;
 <b>Alvo:</b> 1 humanoide;
 <b>Duração:</b> 1 rodada;
@@ -105,18 +195,11 @@ ações).</p>
 <p>+1 PM: muda o alvo para 1 criatura.</p>
 <p>+2 PM: aumenta a quantidade de alvos
 em +1.</p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
+<div class="hidden" id="controlarplantas">
   <span class="des" title="área de 9m, enredados">Controlar Plantas</span>
-  <div class="menu-drawer">
-    <span class="escola">Divina 1 (Transmutação)</span>
+    <p><span class="escola">Divina 1 (Transmutação)</span></p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> curto;
 <b>Área:</b> quadrado com 9m de lado; <b>Duração:</b> cena;
 <b>Resistência:</b> Reflexos anula.</p>
@@ -133,7 +216,7 @@ a vegetação tenta enredar novamente qualquer criatura na área, exigindo
 um novo teste de Reflexos.
 </p>
 <p>Truque: muda a área para alvo de 1 planta e a resistência para nenhuma.
-  Em vez do normal, você pode fazer a planta se mover como se fosse animada. 
+  Em vez do normal, você pode fazer a planta se mover como se fosse animada.
   Ela não pode causar dano ou atrapalhar a concentração de um conjurador.</p>
 <p>+1 PM: muda a duração para instantânea. Em vez do normal, as plantas na
 área diminuem, como se tivessem sido podadas. Terreno difícil muda para terreno
@@ -147,17 +230,13 @@ Plantas.</p>
 você pode fazer testes de Diplomacia com plantas. Em geral, plantas têm uma
 percepção limitada de seus arredores e normalmente fornecem
 respostas simplórias.</p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
+<div class="hidden" id="raioarcano">
   <span class="des" title="cantrip">Raio Arcano</span>
-  <div class="menu-drawer">
+  <p>
+  <input type="text" value="!r 1d6" onclick="clicktextbox(this);" readonly>
+  </p>
 <p>Você pode gastar uma ação padrão
 para disparar um raio num alvo em alcance curto que
 causa 1d6 pontos de dano de essência. Esse dano
@@ -165,21 +244,15 @@ aumenta em +1d6 para cada círculo de magia acima
 do 1º que você puder lançar. O alvo pode fazer um
 teste de Reflexos (CD atributo-chave) para reduzir o
 dano à metade.</p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
+<div class="hidden" id="setainfalivel">
   <span class="des" title="2x(1d4+1)">Seta Infalível de Talude</span>
-  <div class="menu-drawer">
-    <span class="escola">Arcana 1 (Evocação)</span>
+    <p><span class="escola">Arcana 1 (Evocação)</span></p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
 <b>Alvo: </b>até 2 criaturas;
-<b>Duração:</b> instantânea;
+<b>Duração:</b> instantânea;</p>
+<input type="text" value="!rr 2 1d4+1" onclick="clicktextbox(this);" readonly>
 <p>Favorita entre arcanistas iniciantes,
 esta magia lança duas setas de energia que causando 1d4+1 pontos de
 dano de essência cada. Você pode lançar as setas em alvos diferentes
@@ -196,18 +269,11 @@ dano de essência. Requer 2º círculo.</p>
 <p>+2 PM: muda o número de setas/lanças para três.</p>
 <p>+4 PM: muda o número de setas/lanças para cinco. Requer 2º círculo.</p>
 <p>+9 PM: muda o número de setas/lanças para dez. Requer 4º círculo.</p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
-  <span class="des" title="inconsciente. Vontade (só fatigado)">Sono</span>
-  <div class="menu-drawer">
-    <span class="escola">Arcana 1 (Encantamento)</span>
+<div class="hidden" id="sono">
+<span class="des" title="inconsciente. Vontade (só fatigado)">Sono</span>
+<p><span class="escola">Arcana 1 (Encantamento)</span></p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> curto;
 <b>Alvo: </b>1 criatura de ND 2 ou menor;
 <b>Duração:</b> cena;
@@ -230,53 +296,13 @@ dentro do limite de ND são afetadas.</p>
 Requer 4º círculo.</p>
 <p>+14 PM: afeta alvos de qualquer ND.
 Requer 5º círculo.</p>
-  </div>
-</div>
 </div>
 
-<p><h3>Habilidades</h3></p>
-
-<div class="content">
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
-  <span class="des">Armadura de Allihanna</span>
-  <div class="menu-drawer">
-<p>Você pode gastar uma ação de movimento e 1 PM para transformar
-  sua pele em casca de árvore, recebendo +2 na Defesa até o fim da cena.</p>
-  </div>
-</div>
-
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
-  <span class="des">Empatia Selvagem</span>
-  <div class="menu-drawer">
-<p> Você pode se comunicar com animais por meio de linguagem corporal
-  e vocalizações. Você pode usar Adestramento para mudar atitude e pedir
-  favores de animais (veja Diplomacia, na página 117). Caso receba esta
-  habilidade novamente, recebe +2 em Adestramento.</p>
-  </div>
-</div>
-</div>
-
-<p><h3>Poderes</h3></p>
-
-<div class="content">
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
-  <span class="des">Carícia Sombria (Tenebra)</span>
-  <div class="menu-drawer">
+<div class="hidden" id="cariciasombria">
+<span class="des">Carícia Sombria (Tenebra)</span>
+<p>
+<input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
+</p>
 <p>
   Você pode gastar 1 PM e uma ação padrão para cobrir sua mão com energia negativa e tocar uma criatura
   em alcance corpo a corpo. A criatura sofre 2d6 pontos
@@ -284,48 +310,57 @@ Requer 5º círculo.</p>
   e você recupera PV iguais à metade do dano causado.
   Você pode aprender Toque Vampírico como uma magia
   divina. Se fizer isso, o custo dela diminui em –1 PM. </p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
-  <span class="des">Cultura Exótica</span>
-  <div class="menu-drawer">
+<div class="hidden" id="culturaexotica">
+<span class="des">Cultura Exótica</span>
 <p>
 Por sua diferente visão de mundo, você encontra
 soluções inesperadas. Você pode gastar 1 PM para
 fazer um teste de perícia somente treinada, mesmo
 sem ser treinado na perícia.</p>
-  </div>
 </div>
 
-<div class="container">
-  <a class="toggle-menu des" href="#">
-    <i></i>
-    <i></i>
-    <i></i>
-  </a>
-  <span class="des">Lembranças Graduais</span>
-  <div class="menu-drawer">
+<div class="hidden" id="lembrancasgraduais">
+<span class="des">Lembranças Graduais</span>
 <p>
 Durante suas aventuras, em determinados momentos a critério do mestre,
 você pode fazer um teste de Sabedoria (CD 10) para reconhecer pessoas,
 criaturas ou lugares que tenha encontrado antes de perder a memória.</p>
-  </div>
 </div>
+
+<div class="hidden" id="armaduraalihanna">
+<span class="des">Armadura de Allihanna</span>
+<p>Você pode gastar uma ação de movimento e 1 PM para transformar
+  sua pele em casca de árvore, recebendo +2 na Defesa até o fim da cena.</p>
+</div>
+
+<div class="hidden" id="empatiaselvagem">
+<span class="des">Empatia Selvagem</span>
+<p> Você pode se comunicar com animais por meio de linguagem corporal
+  e vocalizações. Você pode usar Adestramento para mudar atitude e pedir
+  favores de animais (veja Diplomacia, na página 117). Caso receba esta
+  habilidade novamente, recebe +2 em Adestramento.</p>
+</div>
+
+
 </div>
 
 <script>
-$(document).ready(function(){
-  $(".des").click(function() {
-    $(this).parent().find(".toggle-menu").toggleClass("active");
-    $(this).parent().find(".menu-drawer").toggleClass("open");
-  });
-});
+  document.getElementById('descri').innerHTML = document.getElementById('pericias').innerHTML;
+
+  function displaySpell(spellname){
+    document.getElementById('descri').innerHTML = document.getElementById(spellname).innerHTML;
+  };
+
+  function clicktextbox(copyText) {
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+};
 </script>
 </body>
 </html>
