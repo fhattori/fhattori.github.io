@@ -14,8 +14,8 @@
     <a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a>
   </div>
   <div class="innercolumn4" onclick="displaySpell('pericias')">
-    <h4 class="stats">LVL: 3 &nbsp;&nbsp; CD 17 &nbsp; CA 14 </h4>
-    <h4 class="stats">PM 22 &nbsp; PV 18</h4>
+    <h4 class="stats">LVL: 4 &nbsp;&nbsp; CD 19 &nbsp; CA 14 </h4>
+    <h4 class="stats">PM 28 &nbsp; PV 22</h4>
   </div>
 </div>
 
@@ -158,13 +158,10 @@ contra o próximo ataque que sofrer até o fim do turno atual.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> curto;
 <b>Alvo:</b> criaturas escolhidas;
 <b>Duração:</b> cena;
-<p>Abençoa os alvos, que recebem +1 em
-testes de ataque e rolagens de dano.
+<p>Abençoa os alvos, que recebem +1 em testes de ataque e rolagens de dano.
 Bênção anula Perdição.</p>
-<p>+1 PM: muda o alvo para 1 cadáver e a
-duração para 1 semana. O cadáver não se
-decompõe nem pode ser transformado
-em morto-vivo pela duração da magia.</p>
+<p>+1 PM: muda o alvo para 1 cadáver e a duração para 1 semana. O cadáver não se
+decompõe nem pode ser transformado em morto-vivo pela duração da magia.</p>
 <p>+2 PM: aumenta os bônus em +1, limitado pelo círculo máximo de magia
 que você pode lançar.</p>
 
@@ -239,16 +236,15 @@ respostas simplórias.</p>
 <div class="hidden" id="magiaampliada">
   <span class="des" title="+2PM para aumetar alcance">Magia Ampliada</span>
   <p><span class="escola">Aprimoramento</span></p>
-<p>Aumenta o alcance da magia em um passo (de
-curto para médio, de médio para longo) ou dobra
-a área de efeito da magia. Por exemplo, uma Bola
-de Fogo ampliada tem seu alcance aumentado para
+<p>Aumenta o alcance da magia em um passo (de curto para médio, de médio para longo) ou dobra
+a área de efeito da magia. Por exemplo, uma Bola de Fogo ampliada tem seu alcance aumentado para
 longo ou sua área aumentada para 12m de raio.
 Custo: +2 PM.</p>
 </div>
 
 <div class="hidden" id="raioarcano">
   <span class="des" title="cantrip">Raio Arcano</span>
+  <p><span class="escola">Poder de classe</span></p>
   <p>
   <input type="text" value="!r 1d6" onclick="clicktextbox(this);" readonly>
   </p>
@@ -315,20 +311,20 @@ Requer 5º círculo.</p>
 
 <div class="hidden" id="cariciasombria">
 <span class="des">Carícia Sombria (Tenebra)</span>
+<p><span class="escola">Poder da Deusa Tenebra</span></p>
 <p>
 <input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
 </p>
 <p>
-  Você pode gastar 1 PM e uma ação padrão para cobrir sua mão com energia negativa e tocar uma criatura
-  em alcance corpo a corpo. A criatura sofre 2d6 pontos
-  de dano de trevas (Fortitude CD Sab reduz à metade)
-  e você recupera PV iguais à metade do dano causado.
-  Você pode aprender Toque Vampírico como uma magia
-  divina. Se fizer isso, o custo dela diminui em –1 PM. </p>
+Você pode gastar 1 PM e uma ação padrão para cobrir sua mão com energia negativa e tocar uma criatura
+em alcance corpo a corpo. A criatura sofre 2d6 pontos de dano de trevas (Fortitude CD Sab reduz à metade)
+e você recupera PV iguais à metade do dano causado.
+Você pode aprender Toque Vampírico como uma magia divina. Se fizer isso, o custo dela diminui em –1 PM. </p>
 </div>
 
 <div class="hidden" id="culturaexotica">
 <span class="des">Cultura Exótica</span>
+<p><span class="escola">Poder de origem</span></p>
 <p>
 Por sua diferente visão de mundo, você encontra
 soluções inesperadas. Você pode gastar 1 PM para
@@ -338,6 +334,7 @@ sem ser treinado na perícia.</p>
 
 <div class="hidden" id="lembrancasgraduais">
 <span class="des">Lembranças Graduais</span>
+<p><span class="escola">Poder de origem</span></p>
 <p>
 Durante suas aventuras, em determinados momentos a critério do mestre,
 você pode fazer um teste de Sabedoria (CD 10) para reconhecer pessoas,
@@ -346,12 +343,14 @@ criaturas ou lugares que tenha encontrado antes de perder a memória.</p>
 
 <div class="hidden" id="armaduraalihanna">
 <span class="des">Armadura de Allihanna</span>
+<p><span class="escola">Poder de raça</span></p>
 <p>Você pode gastar uma ação de movimento e 1 PM para transformar
   sua pele em casca de árvore, recebendo +2 na Defesa até o fim da cena.</p>
 </div>
 
 <div class="hidden" id="empatiaselvagem">
 <span class="des">Empatia Selvagem</span>
+<p><span class="escola">Poder de raça</span></p>
 <p> Você pode se comunicar com animais por meio de linguagem corporal
   e vocalizações. Você pode usar Adestramento para mudar atitude e pedir
   favores de animais (veja Diplomacia, na página 117). Caso receba esta
