@@ -14,8 +14,8 @@
     <a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a>
   </div>
   <div class="innercolumn4" onclick="displaySpell('pericias')">
-    <h4 class="stats">LVL: 4 &nbsp;&nbsp; CD 19 &nbsp; CA 14 </h4>
-    <h4 class="stats">PM 28 &nbsp; PV 22</h4>
+    <h4 class="stats">LVL: 5 &nbsp;&nbsp; CD 20 &nbsp; CA 14 </h4>
+    <h4 class="stats">PM 32 &nbsp; PV 26</h4>
   </div>
 </div>
 
@@ -69,6 +69,10 @@
 
   <div class="innercolumn" onclick="displaySpell('sono')">
     <span class="des-ctrl">Sono</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('sussurros')">
+    <span class="des-ctrl">Sussurros Insanos</span>
   </div>
 
   <div class="innercolumn" onclick="displaySpell('culturaexotica')">
@@ -247,7 +251,7 @@ Custo: +2 PM.</p>
   <span class="des" title="cantrip">Raio Arcano</span>
   <p><span class="escola">Poder de classe</span></p>
   <p>
-  <input type="text" value="!r 1d6" onclick="clicktextbox(this);" readonly>
+  <input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
   </p>
 <p>Você pode gastar uma ação padrão
 para disparar um raio num alvo em alcance curto que
@@ -309,6 +313,31 @@ Requer 4º círculo.</p>
 <p>+14 PM: afeta alvos de qualquer ND.
 Requer 5º círculo.</p>
 </div>
+
+<div class="hidden" id="sussurros">
+<span class="des" title="confuso. Vontade (anula)">Sussurros Insanos</span>
+<p><span class="escola">Arcana 2 (Encantamento)</span></p>
+<p>
+<b>Execução:</b> padrão; <b>Alcance:</b> curto;
+<b>Alvo:</b> 1 humanoide; <b>Duração:</b> cena;
+<b>Resistência:</b> Vontade anula.
+</p>
+<p>
+Você murmura palavras desconexas
+que afetam a mente do alvo. O alvo
+fica confuso.
+</p>
+<p>+2 PM: aumenta o número de alvos em +1.
+<p>
+</p>
++3 PM: muda o alvo para 1 criatura.
+</p>
+<p>
++12 PM: muda o alvo para criaturas escolhidas. Requer 5º círculo.
+</p>
+</p>
+</div>
+
 
 <div class="hidden" id="cariciasombria">
 <span class="des">Carícia Sombria (Tenebra)</span>
