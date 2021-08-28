@@ -14,9 +14,9 @@
     <a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a>
   </div>
   <div class="innercolumn4" onclick="displaySpell('pericias')">
-    <h4 class="stats">LVL: 6 &nbsp; CA 14 </h4>
+    <h4 class="stats">LVL: 7 &nbsp; CA 14 </h4>
     <h4 class="stats">CD 18-20-24 (Arcana-Ilusão-Encantamento)</h4>
-    <h4 class="stats">PM 40 &nbsp; PV 30</h4>
+    <h4 class="stats">PM 46 &nbsp; PV 34</h4>
   </div>
 </div>
 
@@ -58,6 +58,10 @@
 -->
   <div class="innercolumn" onclick="displaySpell('controlarplantas')">
     <span class="des-ctrl">Controlar Plantas</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('dissiparmagia')">
+    <span class="des-ctrl">Dissipar Magia</span>
   </div>
 
   <div class="innercolumn" onclick="displaySpell('raioarcano')">
@@ -241,6 +245,31 @@ percepção limitada de seus arredores e normalmente fornecem
 respostas simplórias.</p>
 </div>
 
+<div class="hidden" id="dissiparmagia">
+  <span class="des" title="dissipa uma magia">Dissipar Magia</span>
+    <p><span class="escola">Universal 2 (Abjuração)</span></p>
+<p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
+<b>Alvo ou Área:</b> 1 criatura ou 1 objeto
+mágico ou esfera com 3m de raio; <b>Duração:</b> instantânea.</p>
+<p>Você dissipa outras magias que estejam ativas, como se sua duração tivesse acabado. Note que efeitos de magias
+instantâneas não podem ser dissipados
+(não se pode dissipar uma Bola de Fogo
+ou Relâmpago depois que já causaram
+dano...). Se lançar essa magia em uma
+criatura ou área, faça um teste de Misticismo; você anula as magias com CD
+igual ou menor que o resultado do teste. Se lançada contra um item mágico, o
+transforma em um item mundano por
+1d6 rodadas (sem teste de resistência).</p>
+<p>+12 PM: muda a área para esfera com
+9m de raio. Em vez do normal, cria um
+efeito de disjunção. Todas as magias na
+área são automaticamente dissipadas e
+todos os itens mágicos na área, exceto aqueles que você estiver carregando, viram itens mundanos (com direito a um teste de resistência para evitar
+esse efeito). Requer 5º círculo.</p>
+<p><b>Contramágica Aprimorada</b>. Uma vez por rodada,
+você pode fazer uma contramágica como uma reação</p>
+</div>
+
 <div class="hidden" id="magiaampliada">
   <span class="des" title="+2PM para aumetar alcance">Magia Ampliada</span>
   <p><span class="escola">Aprimoramento</span></p>
@@ -271,7 +300,7 @@ dano à metade.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
 <b>Alvo: </b>até 2 criaturas;
 <b>Duração:</b> instantânea;</p>
-<input type="text" value="!rr 2 1d4+1" onclick="clicktextbox(this);" readonly>
+<input type="text" value="!r 2 1d4+1" onclick="clicktextbox(this);" readonly>
 <p>Favorita entre arcanistas iniciantes,
 esta magia lança duas setas de energia que causando 1d4+1 pontos de
 dano de essência cada. Você pode lançar as setas em alvos diferentes
