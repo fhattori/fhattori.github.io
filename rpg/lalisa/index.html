@@ -59,9 +59,13 @@
   <div class="innercolumn" onclick="displaySpell('controlarplantas')">
     <span class="des-ctrl">Controlar Plantas</span>
   </div>
-
+<!--
   <div class="innercolumn" onclick="displaySpell('dissiparmagia')">
     <span class="des-ctrl">Dissipar Magia</span>
+  </div>
+-->
+  <div class="innercolumn" onclick="displaySpell('marcadaobediencia')">
+    <span class="des-ctrl">Marca da Obediência</span>
   </div>
 
   <div class="innercolumn" onclick="displaySpell('raioarcano')">
@@ -271,12 +275,36 @@ você pode fazer uma contramágica como uma reação</p>
 </div>
 
 <div class="hidden" id="magiaampliada">
-  <span class="des" title="+2PM para aumetar alcance">Magia Ampliada</span>
+  <span class="des" title="+2PM para aumentar o alcance">Magia Ampliada</span>
   <p><span class="escola">Aprimoramento</span></p>
 <p>Aumenta o alcance da magia em um passo (de curto para médio, de médio para longo) ou dobra
 a área de efeito da magia. Por exemplo, uma Bola de Fogo ampliada tem seu alcance aumentado para
 longo ou sua área aumentada para 12m de raio.
 Custo: +2 PM.</p>
+</div>
+
+<div class="hidden" id="marcadaobediencia">
+  <span class="des" title="criatura segue um comando simples">Marca da Obediência</span>
+    <p><span class="escola">Universal 2 (Encantamento)</span></p>
+<p><b>Execução:</b> padrão; <b>Alcance:</b> toque;
+<b>Alvo:</b> 1 criatura; <b>Duração:</b> cena; <b>Resistência:</b> Vontade anula.</p>
+<p>Você toca uma criatura, gravando uma
+marca mística no corpo dela enquanto
+profere uma ordem, como “não ataque
+a mim ou meus aliados”, “siga-me” ou
+“não saia desta sala”. A criatura deve
+seguir essa ordem, gastando todas as
+ações de seu turno para isso. A ordem
+não pode ser genérica demais (como
+“ajude-me”, por exemplo), nem forçar
+o alvo a atos suicidas. A cada rodada,
+o alvo pode fazer um teste de Vontade. Se passar, a magia é dissipada.</p>
+<p>+3 PM: muda a duração para 1 dia. Se
+não estiver em combate, a criatura só
+pode fazer o teste de Vontade a cada
+hora. Requer 3º círculo.</p>
+<p>+3 PM: sempre que o alvo fizer o teste de Vontade e falhar, a marca causa
+3d6 pontos de dano mental. Requer 3º círculo.</p>
 </div>
 
 <div class="hidden" id="raioarcano">
