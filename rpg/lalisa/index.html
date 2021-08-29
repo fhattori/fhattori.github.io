@@ -14,9 +14,9 @@
     <a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a>
   </div>
   <div class="innercolumn4" onclick="displaySpell('pericias')">
-    <h4 class="stats">LVL: 6 &nbsp; CA 14 </h4>
-    <h4 class="stats">CD 18-20-24 (Arcana-Ilusão-Encantamento)</h4>
-    <h4 class="stats">PM 40 &nbsp; PV 30</h4>
+    <h4 class="stats">LVL: 8 &nbsp; CA 14 </h4>
+    <h4 class="stats">CD 19-21-25 (Arcana-Ilusão-Encantamento)</h4>
+    <h4 class="stats">PM 52 &nbsp; PV 38</h4>
   </div>
 </div>
 
@@ -47,6 +47,10 @@
     <span class="des-bless">Benção</span>
   </div>
 
+  <div class="innercolumn" onclick="displaySpell('boladefogo')">
+    <span class="des-dmg">Bola de Fogo</span>
+  </div>
+
   <div class="innercolumn" onclick="displaySpell('cariciasombria')">
     <span class="des-dmg">Carícia Sombria</span>
   </div>
@@ -58,6 +62,14 @@
 -->
   <div class="innercolumn" onclick="displaySpell('controlarplantas')">
     <span class="des-ctrl">Controlar Plantas</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('dissiparmagia')">
+    <span class="des-ctrl">Dissipar Magia</span>
+  </div>
+
+  <div class="innercolumn" onclick="displaySpell('marcadaobediencia')">
+    <span class="des-ctrl">Marca da Obediência</span>
   </div>
 
   <div class="innercolumn" onclick="displaySpell('raioarcano')">
@@ -88,6 +100,10 @@
     <span class="des minor">Lembranças Graduais</span>
   </div>
 
+  <div class="innercolumn" onclick="displaySpell('magiaacelerada')">
+    <span class="des minor">Magia Acelerada</span>
+  </div>
+
   <div class="innercolumn" onclick="displaySpell('magiaampliada')">
     <span class="des minor">Magia Ampliada</span>
   </div>
@@ -101,22 +117,22 @@
 
 <div class="hidden" id="pericias">
   <span class="des">Perícias</span>
-  <p>Iniciativa <input type="text" class="text-pericias" value="!r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Percepção <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
-  <p>Acrobacia <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
-  <p>Atletismo <input type="text" class="text-pericias" value="!r 1d20+3" onclick="clicktextbox(this);" readonly></p>
-  <p>Cura <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
-  <p>Diplomacia <input type="text" class="text-pericias" value="!r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Enganação <input type="text" class="text-pericias" value="!r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Intimidação <input type="text" class="text-pericias" value="!r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Intuição <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
-  <p>Investigação <input type="text" class="text-pericias" value="!r 1d20+3" onclick="clicktextbox(this);" readonly></p>
-  <p>Luta <input type="text" class="text-pericias" value="!r 1d20+3" onclick="clicktextbox(this);" readonly></p>
-  <p>Misticismo <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Iniciativa <input type="text" class="text-pericias" value="!r 1d20+10" onclick="clicktextbox(this);" readonly></p>
+  <p>Percepção <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Acrobacia <input type="text" class="text-pericias" value="!r 1d20+6" onclick="clicktextbox(this);" readonly></p>
+  <p>Atletismo <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+  <p>Cura <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Diplomacia <input type="text" class="text-pericias" value="!r 1d20+9" onclick="clicktextbox(this);" readonly></p>
+  <p>Enganação <input type="text" class="text-pericias" value="!r 1d20+9" onclick="clicktextbox(this);" readonly></p>
+  <p>Intimidação <input type="text" class="text-pericias" value="!r 1d20+9" onclick="clicktextbox(this);" readonly></p>
+  <p>Intuição <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Investigação <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+  <p>Luta <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+  <p>Misticismo <input type="text" class="text-pericias" value="!r 1d20+8" onclick="clicktextbox(this);" readonly></p>
   <!--<p>Pontaria <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>-->
-  <p>Reflexos <input type="text" class="text-pericias" value="!r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Sobrevivência <input type="text" class="text-pericias" value="!r 1d20+6" onclick="clicktextbox(this);" readonly></p>
-  <p>Vontade <input type="text" class="text-pericias" value="!r 1d20+6" onclick="clicktextbox(this);" readonly></p>
+  <p>Reflexos <input type="text" class="text-pericias" value="!r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <p>Sobrevivência <input type="text" class="text-pericias" value="!r 1d20+9" onclick="clicktextbox(this);" readonly></p>
+  <p>Vontade <input type="text" class="text-pericias" value="!r 1d20+9" onclick="clicktextbox(this);" readonly></p>
 </div>
 
 <div class="hidden" id="adagamental">
@@ -172,6 +188,30 @@ Bênção anula Perdição.</p>
 decompõe nem pode ser transformado em morto-vivo pela duração da magia.</p>
 <p>+2 PM: aumenta os bônus em +1, limitado pelo círculo máximo de magia
 que você pode lançar.</p>
+</div>
+
+<div class="hidden" id="boladefogo">
+  <span class="des" title="6d6 em 6m de área">Bola de Fogo</span>
+    <p><span class="escola">Arcana 2 (Evocação)</span></p>
+<p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
+<b>Área:</b> esfera com 6m de raio;
+<b>Duração:</b> instantânea;
+<b>Resistência:</b> Reflexos reduz à metade.
+<p>Esta famosa magia de ataque cria uma
+poderosa explosão, causando 6d6 pontos de dano de fogo em todas as criaturas e objetos livres na área.</p>
+<p>+2 PM: aumenta o dano em +2d6.</p>
+<p>+2 PM: muda a área para efeito de esfera flamejante com tamanho Médio e
+a duração para cena. Em vez do normal, cria uma esfera flamejante com
+1,5m de diâmetro que causa 3d6 pontos de dano a qualquer criatura no
+mesmo espaço. Você pode gastar uma ação de movimento para fazer a esfera voar 9m em qualquer direção. Ela é
+imune a dano, mas pode ser apagada com água. Uma criatura só pode sofrer
+dano da esfera uma vez por rodada.</p>
+<p>+3 PM: muda a duração para 1 dia ou
+até ser descarregada. Em vez do normal, você cria uma pequena pedra flamejante, que pode detonar como uma
+reação, descarregando a magia. A pedra pode ser usada como uma arma de
+arremesso com alcance curto. Uma vezdetonada, causa o dano da magia numa
+área de esfera de 6m de raio</p>
+</div>
 
 <div class="hidden" id="comando">
   <span class="des" title="fuja, largue, pare, senta ou venha">Comando</span>
@@ -241,13 +281,72 @@ percepção limitada de seus arredores e normalmente fornecem
 respostas simplórias.</p>
 </div>
 
+<div class="hidden" id="dissiparmagia">
+  <span class="des" title="dissipa uma magia">Dissipar Magia</span>
+    <p><span class="escola">Universal 2 (Abjuração)</span></p>
+<p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
+<b>Alvo ou Área:</b> 1 criatura ou 1 objeto
+mágico ou esfera com 3m de raio; <b>Duração:</b> instantânea.</p>
+<p>Você dissipa outras magias que estejam ativas, como se sua duração tivesse acabado. Note que efeitos de magias
+instantâneas não podem ser dissipados
+(não se pode dissipar uma Bola de Fogo
+ou Relâmpago depois que já causaram
+dano...). Se lançar essa magia em uma
+criatura ou área, faça um teste de Misticismo; você anula as magias com CD
+igual ou menor que o resultado do teste. Se lançada contra um item mágico, o
+transforma em um item mundano por
+1d6 rodadas (sem teste de resistência).</p>
+<p>+12 PM: muda a área para esfera com
+9m de raio. Em vez do normal, cria um
+efeito de disjunção. Todas as magias na
+área são automaticamente dissipadas e
+todos os itens mágicos na área, exceto aqueles que você estiver carregando, viram itens mundanos (com direito a um teste de resistência para evitar
+esse efeito). Requer 5º círculo.</p>
+</div>
+
+<div class="hidden" id="magiaacelerada">
+  <span class="des" title="+4PM usar magia como ação livre">Magia Acelerada</span>
+  <p><span class="escola">Aprimoramento</span></p>
+<p>Muda a execução da magia para ação livre. Você só
+pode aplicar este aprimoramento em magias com execução de movimento, padrão ou completa e só pode
+lançar uma magia como ação livre por rodada. Custo:
++4 PM. Pré-requisito: lançar magias de 2º círculo</p>
+</div>
+
 <div class="hidden" id="magiaampliada">
-  <span class="des" title="+2PM para aumetar alcance">Magia Ampliada</span>
+  <span class="des" title="+2PM para aumentar o alcance">Magia Ampliada</span>
   <p><span class="escola">Aprimoramento</span></p>
 <p>Aumenta o alcance da magia em um passo (de curto para médio, de médio para longo) ou dobra
 a área de efeito da magia. Por exemplo, uma Bola de Fogo ampliada tem seu alcance aumentado para
 longo ou sua área aumentada para 12m de raio.
 Custo: +2 PM.</p>
+</div>
+
+<div class="hidden" id="marcadaobediencia">
+  <span class="des" title="criatura segue um comando simples">Marca da Obediência</span>
+    <p><span class="escola">Universal 2 (Encantamento)</span></p>
+    <p>
+    <input type="text" value="!r 1d20+3" onclick="clicktextbox(this);" readonly>
+    </p>
+<p><b>Execução:</b> padrão; <b>Alcance:</b> toque;
+<b>Alvo:</b> 1 criatura; <b>Duração:</b> cena; <b>Resistência:</b> Vontade anula.</p>
+<p>Você toca uma criatura, gravando uma
+marca mística no corpo dela enquanto
+profere uma ordem, como “não ataque
+a mim ou meus aliados”, “siga-me” ou
+“não saia desta sala”. A criatura deve
+seguir essa ordem, gastando todas as
+ações de seu turno para isso. A ordem
+não pode ser genérica demais (como
+“ajude-me”, por exemplo), nem forçar
+o alvo a atos suicidas. A cada rodada,
+o alvo pode fazer um teste de Vontade. Se passar, a magia é dissipada.</p>
+<p>+3 PM: muda a duração para 1 dia. Se
+não estiver em combate, a criatura só
+pode fazer o teste de Vontade a cada
+hora. Requer 3º círculo.</p>
+<p>+3 PM: sempre que o alvo fizer o teste de Vontade e falhar, a marca causa
+3d6 pontos de dano mental. Requer 3º círculo.</p>
 </div>
 
 <div class="hidden" id="raioarcano">
@@ -271,7 +370,7 @@ dano à metade.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
 <b>Alvo: </b>até 2 criaturas;
 <b>Duração:</b> instantânea;</p>
-<input type="text" value="!rr 2 1d4+1" onclick="clicktextbox(this);" readonly>
+<input type="text" value="!r 2 1d4+1" onclick="clicktextbox(this);" readonly>
 <p>Favorita entre arcanistas iniciantes,
 esta magia lança duas setas de energia que causando 1d4+1 pontos de
 dano de essência cada. Você pode lançar as setas em alvos diferentes
