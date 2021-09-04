@@ -68,6 +68,10 @@
     <span class="des-ctrl">Dissipar Magia</span>
   </div>
 
+  <div class="innercolumn" onclick="displaySpell('mantodassombras')">
+    <span class="des-ctrl">Manto das Sombras</span>
+  </div>
+
   <div class="innercolumn" onclick="displaySpell('marcadaobediencia')">
     <span class="des-ctrl">Marca da Obediência</span>
   </div>
@@ -303,6 +307,8 @@ efeito de disjunção. Todas as magias na
 área são automaticamente dissipadas e
 todos os itens mágicos na área, exceto aqueles que você estiver carregando, viram itens mundanos (com direito a um teste de resistência para evitar
 esse efeito). Requer 5º círculo.</p>
+<p><b>Contramágica Aprimorada</b>. Uma vez por rodada,
+você pode fazer uma contramágica como uma reação</p>
 </div>
 
 <div class="hidden" id="magiaacelerada">
@@ -321,6 +327,26 @@ lançar uma magia como ação livre por rodada. Custo:
 a área de efeito da magia. Por exemplo, uma Bola de Fogo ampliada tem seu alcance aumentado para
 longo ou sua área aumentada para 12m de raio.
 Custo: +2 PM.</p>
+</div>
+
+<div class="hidden" id="mantodassombras">
+  <span class="des" title="se torna incorpóreo">Manto de Sombras</span>
+    <p><span class="escola">Universal 3 (Ilusão)</span></p>
+    <p>
+    <input type="text" value="!r 1d20+3" onclick="clicktextbox(this);" readonly>
+    </p>
+<p><b>Execução:</b> padrão; <b>Alcance:</b> pessoal;
+<b>Alvo:</b> você; <b>Duração:</b> sustentada.</p>
+<p>Você fica coberto por um manto de
+energia sombria. Nesta forma, torna-se incorpóreo (inclui seu equipamento): só pode ser afetado por armas
+mágicas, magias ou outras criaturas incorpóreas e pode atravessar objetos só-
+lidos, mas não manipulá-los. Contudo, se torna vulnerável à luz direta:
+se exposto a uma fonte de luz, sofre 1 ponto de dano por rodada.
+Você pode gastar uma ação de movimento e 1 PM para “entrar” em uma
+sombra do seu tamanho ou maior e se teletransportar para outra sombra,
+também do seu tamanho ou maior, em alcance médio.</p>
+<p>+4 PM: muda o alcance para toque e o
+alvo para 1 criatura. Requer 4º círculo.</p>
 </div>
 
 <div class="hidden" id="marcadaobediencia">
