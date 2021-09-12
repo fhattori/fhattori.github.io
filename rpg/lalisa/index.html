@@ -292,6 +292,9 @@ respostas simplórias.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
 <b>Alvo ou Área:</b> 1 criatura ou 1 objeto
 mágico ou esfera com 3m de raio; <b>Duração:</b> instantânea.</p>
+<p>
+<input type="text" value="!r 1d20+8" onclick="clicktextbox(this);" readonly>
+</p>
 <p>Você dissipa outras magias que estejam ativas, como se sua duração tivesse acabado. Note que efeitos de magias
 instantâneas não podem ser dissipados
 (não se pode dissipar uma Bola de Fogo
@@ -332,9 +335,6 @@ Custo: +2 PM.</p>
 <div class="hidden" id="mantodassombras">
   <span class="des" title="se torna incorpóreo">Manto de Sombras</span>
     <p><span class="escola">Universal 3 (Ilusão)</span></p>
-    <p>
-    <input type="text" value="!r 1d20+3" onclick="clicktextbox(this);" readonly>
-    </p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> pessoal;
 <b>Alvo:</b> você; <b>Duração:</b> sustentada.</p>
 <p>Você fica coberto por um manto de
@@ -352,11 +352,11 @@ alvo para 1 criatura. Requer 4º círculo.</p>
 <div class="hidden" id="marcadaobediencia">
   <span class="des" title="criatura segue um comando simples">Marca da Obediência</span>
     <p><span class="escola">Universal 2 (Encantamento)</span></p>
-    <p>
-    <input type="text" value="!r 1d20+3" onclick="clicktextbox(this);" readonly>
-    </p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> toque;
 <b>Alvo:</b> 1 criatura; <b>Duração:</b> cena; <b>Resistência:</b> Vontade anula.</p>
+<p>
+<input type="text" value="!r 1d20+3" onclick="clicktextbox(this);" readonly>
+</p>
 <p>Você toca uma criatura, gravando uma
 marca mística no corpo dela enquanto
 profere uma ordem, como “não ataque
@@ -379,9 +379,10 @@ hora. Requer 3º círculo.</p>
 <div class="hidden" id="raioarcano">
   <span class="des" title="cantrip">Raio Arcano</span>
   <p><span class="escola">Poder de classe</span></p>
-  <p>
-  <input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
-  </p>
+<p><b>Resistência:</b> Reflexos (metade).</p>
+<p>
+<input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
+</p>
 <p>Você pode gastar uma ação padrão
 para disparar um raio num alvo em alcance curto que
 causa 1d6 pontos de dano de essência. Esse dano
