@@ -63,7 +63,7 @@
 
 /* Create four equal columns */
 .innercolumn {
-  flex: 33%;
+  flex: 100%;
   padding: 5px;
   border:0.5px solid black;
 }
@@ -109,6 +109,10 @@
   }
 }
 
+.stats{
+  margin:3px;
+}
+
 .column2{
   float:left;
   width:40%;
@@ -125,6 +129,7 @@
 
 body{
   font-family:arial;
+  font-size:small;
 }
 
 .hidden{
@@ -164,7 +169,7 @@ body{
 }
 
 .cabeca{
-  max-width: 800px;
+  max-width: 700px;
   width:100%;
 }
 
