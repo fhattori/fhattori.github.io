@@ -1,0 +1,74 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Quiz no Scratch - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="binary.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.center {
+ margin: auto;
+ max-width: 1000px;
+ padding: 10px;
+ font-family: arial,sans-serif;
+ }
+
+.image-textunder{
+   margin-bottom:30px;
+   max-width:900px;
+ }
+
+.image-withtext{
+   max-width:900px;
+ }
+</style>
+</head>
+<body>
+<div class="center">
+<h1>Tutorial para criação de Quiz no Scratch</h1>
+<br>
+<h2>Principais blocos</h2>
+<p><img class="image-textunder" src="./blocopergunta.png"/></p>
+<p><img class="image-textunder" src="./blocoresposta.png"/></p>
+<br>
+<h2>Fazendo um quiz simples</h2>
+<p><b>1.</b> Comece um novo projeto</p>
+<p><b>2.</b> Escolha um cenário.</p>
+<p><b>3.</b> <img style="max-height:23px;" src="./addator.png"/>
+  Adicione um ator, ele será responsável por fazer as perguntas para o usuário ou jogador.</p>
+<p><b>4.</b> Adicione o seguinte código.</p>
+<p><img class="image-withtext" src="./step1.png"/></p>
+<p style="margin-bottom:30px;"><i>Lembrando que em computação utilizamos o símbolo asterisco (*) como sinal de multiplicação</i></p>
+<p><b>5.</b> Agora nosso ator fará a pergunta que escolhemos (você pode mudá-la se quiser).
+A resposta dada pelo usuário ficará dentro da variável "resposta"</p>
+<p><b>6.</b> Agora devemos verificar se a resposta que recebemos do jogador está correta.
+  Continue o seu código para ele ficar assim.</p>
+<p><img class="image-textunder" src="./step2.png"/></p>
+<p><b>7.</b> Neste código estamos verificando se a resposta recebida pelo usuário é igual a 42.
+Se for, significa que a resposta está correta e o personagem elogiará o jogador.
+Caso esteja errado, ele dirá que está errado e dirá a resposta correta</p>
+<p><b>8.</b> Agora podemos também adicionar uma pontuação (que aumenta toda vez que o
+usuário acerta uma pergunta).</p>
+<p><b>9.</b> Crie uma nova variável e dê o nome de "Pontos"</p>
+<p><img class="image-textunder" src="./variavel.png"/></p>
+<p><b>10.</b> Adicione o bloco "Mude Pontos para 0" no início do seu código, para
+a pontuação seja zerada toda vez que começarmos um novo jogo.</p>
+<p><img class="image-textunder" src="./mudepontos.png"/></p>
+<p><b>11.</b> Agora adicione o bloco "Adicione 1 a pontos" quando o usuário acertar a respostas,
+para adicionar pontos à pontuação dele se ele tiver acertado.</p>
+<p><img class="image-textunder" src="./adicionepontos.png"/></p>
+<p><b>12.</b> Muito bem! Agora você já conseguiu fazer uma pergunta para o usuário,
+verificar se a resposta que ele deu está correta e adicionar a pontuação dele. Então, faça o seu ator fazer mais perguntas.
+<i>Sugestão: faça perguntas sobre assuntos variados da escola</i></p>
+<br>
+<h3>Desafios</h3>
+<p><b>1.</b> Como fazer para seu personagem dizer ao jogador quantos pontos ele fez no final do jogo?</p>
+<p><b>2.</b> Adicione mais atores ao seu jogo de quiz. Como poderíamos fazer para os personagens alternarem
+quem faz as perguntas? <i>(um personagem faz a primeira pergunta, o outro personagem faz a segunda e assim por diante)</i></p>
+<p><b>3.</b> Como poderíamos fazer para um personagem fazer a
+pergunta e outro personagem dizer se o usuário acertou ou não a resposta?</p>
+<br>
+<p><img style="width:17px;" src="./lisa.gif"/></p>
+</div>
+</body>
+</html>

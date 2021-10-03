@@ -16,7 +16,7 @@
   <div class="innercolumn4" onclick="displaySpell('pericias')">
     <h4 class="stats">LVL: 9 &nbsp; CA 14 </h4>
     <h4 class="stats">CD 20-22-26 (Arcana-Ilusão-Encantamento)</h4>
-    <h4 class="stats">PM 58 &nbsp; PV 42</h4>
+    <h4 class="stats">PM 59 &nbsp; PV 42</h4>
   </div>
 </div>
 
@@ -121,22 +121,22 @@
 
 <div class="hidden" id="pericias">
   <span class="des">Perícias</span>
-  <p>Iniciativa <input type="text" class="text-pericias" value="!r 1d20+10" onclick="clicktextbox(this);" readonly></p>
-  <p>Percepção <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
-  <p>Acrobacia <input type="text" class="text-pericias" value="!r 1d20+6" onclick="clicktextbox(this);" readonly></p>
-  <p>Atletismo <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
-  <p>Cura <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
-  <p>Diplomacia <input type="text" class="text-pericias" value="!r 1d20+8" onclick="clicktextbox(this);" readonly></p>
-  <p>Enganação <input type="text" class="text-pericias" value="!r 1d20+8" onclick="clicktextbox(this);" readonly></p>
-  <p>Intimidação <input type="text" class="text-pericias" value="!r 1d20+8" onclick="clicktextbox(this);" readonly></p>
-  <p>Intuição <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>
-  <p>Investigação <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
-  <p>Luta <input type="text" class="text-pericias" value="!r 1d20+4" onclick="clicktextbox(this);" readonly></p>
-  <p>Misticismo <input type="text" class="text-pericias" value="!r 1d20+8" onclick="clicktextbox(this);" readonly></p>
-  <!--<p>Pontaria <input type="text" class="text-pericias" value="!r 1d20+5" onclick="clicktextbox(this);" readonly></p>-->
-  <p>Reflexos <input type="text" class="text-pericias" value="!r 1d20+8" onclick="clicktextbox(this);" readonly></p>
-  <p>Sobrevivência <input type="text" class="text-pericias" value="!r 1d20+9" onclick="clicktextbox(this);" readonly></p>
-  <p>Vontade <input type="text" class="text-pericias" value="!r 1d20+9" onclick="clicktextbox(this);" readonly></p>
+  <p>Iniciativa <input type="text" class="text-pericias" value="/r 1d20+10" onclick="clicktextbox(this);" readonly></p>
+  <p>Percepção <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Acrobacia <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
+  <p>Atletismo <input type="text" class="text-pericias" value="/r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+  <p>Cura <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Diplomacia <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <p>Enganação <input type="text" class="text-pericias" value="/r 1d20+13" onclick="clicktextbox(this);" readonly></p>
+  <p>Intimidação <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <p>Intuição <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>
+  <p>Investigação <input type="text" class="text-pericias" value="/r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+  <p>Luta <input type="text" class="text-pericias" value="/r 1d20+4" onclick="clicktextbox(this);" readonly></p>
+  <p>Misticismo <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <!--<p>Pontaria <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>-->
+  <p>Reflexos <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <p>Sobrevivência <input type="text" class="text-pericias" value="/r 1d20+9" onclick="clicktextbox(this);" readonly></p>
+  <p>Vontade <input type="text" class="text-pericias" value="/r 1d20+9" onclick="clicktextbox(this);" readonly></p>
 </div>
 
 <div class="hidden" id="adagamental">
@@ -145,7 +145,7 @@
 <p><b>Execução:</b> padrão; <b>Alcance:</b> curto;
 <b>Alvo:</b> 1 criatura; <b>Duração:</b> instantânea;
 <b>Resistência:</b> Vontade parcial.</p>
-<input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
+<input type="text" value="/r 2d6" onclick="clicktextbox(this);" readonly>
 <p>Você manifesta e dispara uma adaga
 imaterial contra a mente do alvo, que
 sofre 2d6 pontos de dano mental e fica
@@ -201,7 +201,7 @@ que você pode lançar.</p>
 <b>Área:</b> esfera com 6m de raio;
 <b>Duração:</b> instantânea;
 <b>Resistência:</b> Reflexos reduz à metade.
-<input type="text" value="!r 3d6" onclick="clicktextbox(this);" readonly>
+<input type="text" value="/r 3d6" onclick="clicktextbox(this);" readonly>
 <p>Esta famosa magia de ataque cria uma
 poderosa explosão, causando 6d6 pontos de dano de fogo em todas as criaturas e objetos livres na área.</p>
 <p>+2 PM: aumenta o dano em +2d6.</p>
@@ -293,7 +293,7 @@ respostas simplórias.</p>
 <b>Alvo ou Área:</b> 1 criatura ou 1 objeto
 mágico ou esfera com 3m de raio; <b>Duração:</b> instantânea.</p>
 <p>
-<input type="text" value="!r 1d20+8" onclick="clicktextbox(this);" readonly>
+<input type="text" value="/r 1d20+8" onclick="clicktextbox(this);" readonly>
 </p>
 <p>Você dissipa outras magias que estejam ativas, como se sua duração tivesse acabado. Note que efeitos de magias
 instantâneas não podem ser dissipados
@@ -338,10 +338,10 @@ Custo: +2 PM.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> pessoal;
 <b>Alvo:</b> você; <b>Duração:</b> sustentada.</p>
 <p>Você fica coberto por um manto de
-energia sombria. Nesta forma, torna-se incorpóreo (inclui seu equipamento): só pode ser afetado por armas
-mágicas, magias ou outras criaturas incorpóreas e pode atravessar objetos só-
-lidos, mas não manipulá-los. Contudo, se torna vulnerável à luz direta:
-se exposto a uma fonte de luz, sofre 1 ponto de dano por rodada.
+energia sombria. Nesta forma, torna-se incorpóreo (inclui seu equipamento):
+só pode ser afetado por armas mágicas, magias ou outras criaturas incorpóreas
+e pode atravessar objetos sólidos, mas não manipulá-los. Contudo, se torna
+vulnerável à luz direta: se exposto a uma fonte de luz, sofre 1 ponto de dano por rodada.
 Você pode gastar uma ação de movimento e 1 PM para “entrar” em uma
 sombra do seu tamanho ou maior e se teletransportar para outra sombra,
 também do seu tamanho ou maior, em alcance médio.</p>
@@ -355,7 +355,7 @@ alvo para 1 criatura. Requer 4º círculo.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> toque;
 <b>Alvo:</b> 1 criatura; <b>Duração:</b> cena; <b>Resistência:</b> Vontade anula.</p>
 <p>
-<input type="text" value="!r 1d20+3" onclick="clicktextbox(this);" readonly>
+<input type="text" value="/r 1d20+3" onclick="clicktextbox(this);" readonly>
 </p>
 <p>Você toca uma criatura, gravando uma
 marca mística no corpo dela enquanto
@@ -381,7 +381,7 @@ hora. Requer 3º círculo.</p>
   <p><span class="escola">Poder de classe</span></p>
 <p><b>Resistência:</b> Reflexos (metade).</p>
 <p>
-<input type="text" value="!r 3d6" onclick="clicktextbox(this);" readonly>
+<input type="text" value="/r 3d6" onclick="clicktextbox(this);" readonly>
 </p>
 <p>Você pode gastar uma ação padrão
 para disparar um raio num alvo em alcance curto que
@@ -398,7 +398,7 @@ dano à metade.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
 <b>Alvo: </b>até 2 criaturas;
 <b>Duração:</b> instantânea;</p>
-<input type="text" value="!r 2 1d4+1" onclick="clicktextbox(this);" readonly>
+<input type="text" value="/r 2 1d4+1" onclick="clicktextbox(this);" readonly>
 <p>Favorita entre arcanistas iniciantes,
 esta magia lança duas setas de energia que causando 1d4+1 pontos de
 dano de essência cada. Você pode lançar as setas em alvos diferentes
@@ -474,7 +474,7 @@ fica confuso.
 <p><span class="escola">Poder da Deusa Tenebra</span></p>
 <p><b>Resistência:</b> Fortitude (metade).</p>
 <p>
-<input type="text" value="!r 2d6" onclick="clicktextbox(this);" readonly>
+<input type="text" value="/r 2d6" onclick="clicktextbox(this);" readonly>
 </p>
 <p>
 Você pode gastar 1 PM e uma ação padrão para cobrir sua mão com energia negativa e tocar uma criatura
