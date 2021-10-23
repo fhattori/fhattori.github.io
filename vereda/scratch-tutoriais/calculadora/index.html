@@ -1,0 +1,86 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Calculadora no Scratch - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="binary.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.center {
+ margin: auto;
+ max-width: 1000px;
+ padding: 10px;
+ font-family: arial,sans-serif;
+ }
+
+.image-textunder{
+   margin-bottom:30px;
+   max-width:900px;
+ }
+
+.image-withtext{
+   max-width:900px;
+ }
+.circle {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background: #8231f5;
+  color: #000;
+  text-align: center;
+  font: 18px Arial, sans-serif;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="center">
+<h1>Variáveis</h1>
+<img style="max-width:350px;" src="./menu-variaveis.png"/>
+<p><div class="circle">1</div> Neste botão podemos criar uma nova variável.</p>
+<p><div class="circle">2</div> Aqui podemos ver a variável "minha variável". 
+Se criarmos uma nova variável, ela aparecerá aqui.<br>
+Quando colocamos este bloco em qualquer lugar, o programa utilizará o valor da variável.</p>
+<p><div class="circle">3</div> Este bloco altera o valor dessa variável.<br>
+Por padrão, ele muda o valor da variável para zero.</p>
+<p><div class="circle">4</div> Este bloco adiciona um valor sobre a variável.<br>
+No caso, por padrão, ele adiciona 1 ao valor da variável escolhida.</p>
+<p><div class="circle">5</div> Estes dois blocos permitem que a gente exiba ou esconda o valor de uma variável na tela do Scratch.</p>
+<br><br>
+<h2>Calculadora no Scratch</h2>
+<p>Agora que já revisamos o uso de variáveis, no Scratch, vamos criar uma calculadora simples no Scratch.<br>
+A idéia dessa calculadora é ter 4 personagens, onde cada um deles é responsável por realizar uma das operações básicas.<br>
+E quando clicamos em um desses personagens, ele pede dois números, o scratch realiza a operação utilizando esses números e o personagem diz a resposta.</p>
+<img style="max-width:400px;" src="./4atores.png"/>
+<p>Por exemplo, clicando no ator da Adição:</p>
+<img style="max-width:400px;" src="./adicao-passo1.png"/>
+<img style="max-width:400px;" src="./adicao-passo2.png"/>
+<img style="max-width:400px;" src="./adicao-passo3.png"/>
+<p>Por exemplo, clicando no ator da Divisão:</p>
+<img style="max-width:400px;" src="./divisao-passo1.png"/>
+<img style="max-width:400px;" src="./divisao-passo2.png"/>
+<img style="max-width:400px;" src="./divisao-passo3.png"/>
+<br><br>
+<h2>Fazendo a calculadora juntos!</h2>
+<p>Para fazer essa calculadora, primeiro precisamos adicionar os nossos atores e definir qual operação cada um deles fará.<br>
+Depois disso, precisamos fazer os atores pedirem os números que usaremos na operação (vamos fazer a soma de exemplo juntos):</p>
+<img style="max-width:400px;" src="./algoritmo-passo1.png"/>
+<p>Nós fazemos isso utilizando o bloco de "pergunte" e guardamos a resposta recebida na variável "primeiroNumero".<br>
+Depois podemos fazer para o segundo número da soma.</p>
+<img style="max-width:400px;" src="./algoritmo-passo2.png"/>
+<p>Depois precisamos fazer o cálculo da soma.<br>
+Para fazer isso, utilizamos um bloco da sessão de Operadores do Scratch, como ilustrado na próxima imagem:</p>
+<img style="max-width:400px;" src="./algoritmo-passo3.png"/>
+<p>Nesse exemplo, estamos colocando o resultado da soma em uma variável chamada "resultado".<br>
+Depois utilizamos essa variável para escrever a mensagem que o nosso ator vai responder para o usuário.</p>
+<br><br>
+<h2>Atividade</h2>
+<p>1) Agora faça a programação dos outros atores (subtração, multiplicação e divisão);<br>
+<i>Lembrete: O sinal de multiplicação é um asterisco * e de divisão é a barra /</i></p>
+<p>2) Tente fazer novos atores que calculam a <b>potência</b> e <b>fatorial</b><br>
+<i>Dica: para fazer potência e fatorial, precisamos utilizar o bloco "repetir XX vezes" e vamos colocar uma variável no lugar de XX</i></p>
+</div>
+<p><img style="width:12px;" src="./lisa-wink.gif"/></p>
+</body>
+</html>
