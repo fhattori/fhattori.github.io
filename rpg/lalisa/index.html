@@ -60,6 +60,11 @@
     <span class="des" onclick="displaySpell('comando')">Comando</span>
   </div>
 -->
+
+<div class="innercolumn" onclick="displaySpell('conjurarelemental')">
+  <span class="des-dmg">Conjurar Elemental</span>
+</div>
+
   <div class="innercolumn" onclick="displaySpell('controlarplantas')">
     <span class="des-ctrl">Controlar Plantas</span>
   </div>
@@ -221,6 +226,28 @@ até ser descarregada. Em vez do normal, você cria uma pequena pedra flamejante
 reação, descarregando a magia. A pedra pode ser usada como uma arma de
 arremesso com alcance curto. Uma vezdetonada, causa o dano da magia numa
 área de esfera de 6m de raio</p>
+</div>
+
+<div class="hidden" id="conjurarelemental">
+  <span class="des" title=" Convoca um elemental como aliado.">Conjurar Elemental</span>
+    <p><span class="escola">Arcana 4 (Convocação)</span></p>
+<p><b>Execução:</b> completa; <b>Alcance:</b> médio;
+<b>Efeito:</b> aliado elemental;
+<b>Duração:</b> sustentada.</p>
+<p>Esta magia transforma uma porção de um elemento inerte em uma criatura
+elemental Grande do tipo do elemento alvo. Por exemplo, lançar esta magia numa fogueira ou tocha cria um
+elemental do fogo. Você pode criar elementais do ar, água, fogo e terra com
+essa magia. O elemental obedece a todos os seus comandos e pode funcionar como um aliado mestre do tipo
+destruidor (mas sem custo em PM) e mais um tipo entre os indicados na lista abaixo.
+Somente você pode ser auxiliado pelo elemental e ele não conta em seu limite de aliados.</p>
+<p>Ar: assassino, perseguidor ou vigilante. Dano de eletricidade.<br>
+Água: ajudante, guardião ou médico. Dano de frio.<br>
+Fogo: atirador, combatente ou fortão. Dano de fogo.<br>
+Terra: combatente, guardião ou montaria. Dano de impacto.</p>
+<p>+5 PM: o elemental muda para Enorme e recebe dois tipos de aliado indicados
+no seu elemento.</p>
+<p>+5 PM: você convoca um elemental de cada tipo. Você pode ordenar que
+cada elemental auxilie você ou seus aliados. Requer 5º círculo</p>
 </div>
 
 <div class="hidden" id="comando">
@@ -387,9 +414,9 @@ hora. Requer 3º círculo.</p>
 <p><b>Execução:</b> padrão; <b>Alcance:</b> médio;
 <b>Efeito:</b> muralha de energia; <b>Duração:</b> cena; <b>Resistência:</b> veja texto.</p>
 <p>
-Esta magia cria uma muralha de um elemento a sua escolha. A muralha 
-pode ter duas formas: uma barreira de até 30m de comprimento e 3m de altura 
-(ou o contrário) ou uma cúpula de 3m de raio. 
+Esta magia cria uma muralha de um elemento a sua escolha. A muralha
+pode ter duas formas: uma barreira de até 30m de comprimento e 3m de altura
+(ou o contrário) ou uma cúpula de 3m de raio.
 Os efeitos variam conforme o tipo de elemento escolhido.
 </p>
 <p>
@@ -397,16 +424,16 @@ Os efeitos variam conforme o tipo de elemento escolhido.
 escolha) emite ondas de calor, que causam 2d6 pontos de dano de fogo em
 criaturas a até 6m. A muralha causa esse dano quando surge e no início de
 seus turnos. Atravessar a muralha causa 8d6 pontos de dano de fogo. Caso
-seja criada em uma área onde existem criaturas, elas sofrem dano como 
+seja criada em uma área onde existem criaturas, elas sofrem dano como
 se estivessem atravessando a muralha, mas podem fazer um teste de Reflexos para
 reduzir o dano à metade (a criatura escolhe para qual lado quer escapar, mas
 se escapar para o lado quente sofrerá mais 2d6 pontos de dano).
 </p>
 <p>
 <i>Gelo.</i> Evoca uma parede grossa de gelo denso com 15cm de espessura. Na forma de cúpula, pode prender uma ou
-mais criaturas, mas elas têm direito a um teste de Reflexos para escapar 
+mais criaturas, mas elas têm direito a um teste de Reflexos para escapar
 antes que a cúpula se forme. Cada trecho de 3m da muralha tem Defesa 8,
-40 PV e RD 5. Um trecho da muralha que atinja 0 PV será rompido. Qualquer efeito de 
+40 PV e RD 5. Um trecho da muralha que atinja 0 PV será rompido. Qualquer efeito de
 fogo causa dano dobrado à muralha. Uma criatura que atravesse um trecho rompido da muralha
 sofre 4d6 pontos de dano de frio.
 </p>
