@@ -14,9 +14,9 @@
     <a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a>
   </div>
   <div class="innercolumn4" onclick="displaySpell('pericias')">
-    <h4 class="stats">LVL: 11 &nbsp; CA 12 </h4>
-    <h4 class="stats">CD 23-25-29 (Arcana-Ilusão-Encantamento)</h4>
-    <h4 class="stats">PM 82 &nbsp; PV 50</h4>
+    <h4 class="stats">LVL: 12 &nbsp; CA 12 </h4>
+    <h4 class="stats">CD 24-26-39 (Arcana-Ilusão-Encantamento)</h4>
+    <h4 class="stats">PM 91 &nbsp; PV 54</h4>
   </div>
 </div>
 
@@ -121,6 +121,10 @@
     <span class="des minor">Magia Ampliada</span>
   </div>
 
+  <div class="innercolumn" onclick="displaySpell('magiapungente')">
+    <span class="des minor">Magia Pungente</span>
+  </div>
+
 </div>
 <br><br>
 </div>
@@ -131,22 +135,22 @@
 
 <div class="hidden" id="pericias">
   <span class="des">Perícias</span>
-  <p>Iniciativa <input type="text" class="text-pericias" value="/r 1d20+11" onclick="clicktextbox(this);" readonly></p>
-  <p>Percepção <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
-  <p>Acrobacia <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Atletismo <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>
-  <p>Cura <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
-  <p>Diplomacia <input type="text" class="text-pericias" value="/r 1d20+12" onclick="clicktextbox(this);" readonly></p>
-  <p>Enganação <input type="text" class="text-pericias" value="/r 1d20+16" onclick="clicktextbox(this);" readonly></p>
-  <p>Intimidação <input type="text" class="text-pericias" value="/r 1d20+12" onclick="clicktextbox(this);" readonly></p>
-  <p>Intuição <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
-  <p>Investigação <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>
-  <p>Luta <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Misticismo <input type="text" class="text-pericias" value="/r 1d20+9" onclick="clicktextbox(this);" readonly></p>
+  <p>Iniciativa <input type="text" class="text-pericias" value="/r 1d20+12" onclick="clicktextbox(this);" readonly></p>
+  <p>Percepção <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
+  <p>Acrobacia <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <p>Atletismo <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
+  <p>Cura <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
+  <p>Diplomacia <input type="text" class="text-pericias" value="/r 1d20+13" onclick="clicktextbox(this);" readonly></p>
+  <p>Enganação <input type="text" class="text-pericias" value="/r 1d20+17" onclick="clicktextbox(this);" readonly></p>
+  <p>Intimidação <input type="text" class="text-pericias" value="/r 1d20+13" onclick="clicktextbox(this);" readonly></p>
+  <p>Intuição <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
+  <p>Investigação <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
+  <p>Luta <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <p>Misticismo <input type="text" class="text-pericias" value="/r 1d20+10" onclick="clicktextbox(this);" readonly></p>
   <!--<p>Pontaria <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>-->
-  <p>Reflexos <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
-  <p>Sobrevivência <input type="text" class="text-pericias" value="/r 1d20+10" onclick="clicktextbox(this);" readonly></p>
-  <p>Vontade <input type="text" class="text-pericias" value="/r 1d20+10" onclick="clicktextbox(this);" readonly></p>
+  <p>Reflexos <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
+  <p>Sobrevivência <input type="text" class="text-pericias" value="/r 1d20+11" onclick="clicktextbox(this);" readonly></p>
+  <p>Vontade <input type="text" class="text-pericias" value="/r 1d20+11" onclick="clicktextbox(this);" readonly></p>
 </div>
 
 <div class="hidden" id="adagamental">
@@ -362,6 +366,13 @@ lançar uma magia como ação livre por rodada. Custo:
 a área de efeito da magia. Por exemplo, uma Bola de Fogo ampliada tem seu alcance aumentado para
 longo ou sua área aumentada para 12m de raio.
 Custo: +2 PM.</p>
+</div>
+
+<div class="hidden" id="magiapungente">
+  <span class="des" title="+2PM para aumentar o alcance">Magia Pungente</span>
+  <p><span class="escola">Aprimoramento</span></p>
+<p>Quando lança uma magia, você pode pagar 1 PM para aumentar em +2 a CD
+para resistir a ela.</p>
 </div>
 
 <div class="hidden" id="mantodassombras">
