@@ -11,12 +11,24 @@
 
 <div class="row2">
  <div class="innercolumn2">
-  <a href="./ficha.pdf"><img class="cabeca" src="./header.png"/></a>
+  <img class="cabeca" src="./header.png"/>
  </div>
- <div class="innercolumn4" onclick="displaySpell('pericias')">
-  <h4 class="stats">LVL: 13 &nbsp; CA 12 </h4>
-  <h4 class="stats">CD 24-26-30 (Arcana-Ilusão-Encantamento)</h4>
-  <h4 class="stats">PM 98 &nbsp; PV 58</h4>
+ <div class="innercolumn4">
+  <h4 class="stats">LVL: <input type="text" class="smallinput" id="lvl" value="14"></h4> 
+  <span class="stats">PM <span id="pm">000</span> &nbsp; PV <span id="pv">000</span></span><br>
+  <span class="stats">CA: <span id="ca">00</span></span> -- bonus-mágico: <input type="text" class="smallinput" id="bonusMagico" value="0"><br>
+  <span class="stats">CD Arcana: <span id="cd-arcana">00</span> </span><br>
+  <span class="stats">CD Ilusão: <span id="cd-ilusao">00</span> </span><br>
+  <span class="stats">CD Encantamento: <span id="cd-encantamento">00</span> </span><br>
+  <span class="stats">Deslocamento: <span id="ca">9m</span></span><br>
+ </div>
+ <div class="innercolumn4">
+  <span class="stats">FOR: <input type="text" class="smallinput" id="for" value="00"> (<span id="for-mod">+0</span>) </span><br>
+  <span class="stats">DES: <input type="text" class="smallinput" id="des" value="00"> (<span id="des-mod">+0</span>) </span><br>
+  <span class="stats">CON: <input type="text" class="smallinput" id="con" value="00"> (<span id="con-mod">+0</span>) </span><br>
+  <span class="stats">INT: <input type="text" class="smallinput" id="int" value="00"> (<span id="int-mod">+0</span>) </span><br>
+  <span class="stats">SAB: <input type="text" class="smallinput" id="sab" value="00"> (<span id="sab-mod">+0</span>) </span><br>
+  <span class="stats">CAR: <input type="text" class="smallinput" id="car" value="00"> (<span id="car-mod">+0</span>) </span><br>
  </div>
 </div>
 
@@ -147,44 +159,6 @@
 
 </div>
 
-<div id="descricao">
-
-<div class="hidden" id="pericias">
- <span class="des">Perícias</span>
- <p>Iniciativa <input type="text" class="text-pericias" value="/r 1d20+12" onclick="clicktextbox(this);" readonly></p>
- <p>Percepção <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
- <p>Acrobacia <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
- <p>Atletismo <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
- <p>Cura <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
- <p>Diplomacia <input type="text" class="text-pericias" value="/r 1d20+13" onclick="clicktextbox(this);" readonly></p>
- <p>Enganação <input type="text" class="text-pericias" value="/r 1d20+17" onclick="clicktextbox(this);" readonly></p>
- <p>Intimidação <input type="text" class="text-pericias" value="/r 1d20+13" onclick="clicktextbox(this);" readonly></p>
- <p>Intuição <input type="text" class="text-pericias" value="/r 1d20+7" onclick="clicktextbox(this);" readonly></p>
- <p>Investigação <input type="text" class="text-pericias" value="/r 1d20+6" onclick="clicktextbox(this);" readonly></p>
- <p>Luta <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
- <p>Misticismo <input type="text" class="text-pericias" value="/r 1d20+10" onclick="clicktextbox(this);" readonly></p>
- <!--<p>Pontaria <input type="text" class="text-pericias" value="/r 1d20+5" onclick="clicktextbox(this);" readonly></p>-->
- <p>Reflexos <input type="text" class="text-pericias" value="/r 1d20+8" onclick="clicktextbox(this);" readonly></p>
- <p>Sobrevivência <input type="text" class="text-pericias" value="/r 1d20+11" onclick="clicktextbox(this);" readonly></p>
- <p>Vontade <input type="text" class="text-pericias" value="/r 1d20+11" onclick="clicktextbox(this);" readonly></p>
-</div>
-
-</div>
-<script type="text/javascript">
- //document.getElementById('descri').innerHTML = document.getElementById('pericias').innerHTML;
-
- function displaySpell(spellname){
-  //document.getElementById('descri').innerHTML = document.getElementById(spellname).innerHTML;
-  jQuery("#descri").load('spells/'+spellname+'.html');
- };
-
- function clicktextbox(copyText) {
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
- };
-</script>
+<script src="rpg.js" type="text/javascript"></script>
 </body>
 </html>
