@@ -1,6 +1,6 @@
 $( document ).ready(function() {
  resetAll();
- jQuery("#descri").load('spells/pericias.html');
+ jQuery("#descri").html(jQuery("#pericias").html());
  jQuery(".smallinput").change(updateAll);
  updateAll();
 });
