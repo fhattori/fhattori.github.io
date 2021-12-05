@@ -16,6 +16,7 @@ function resetAll(){
  jQuery("#int").val(10);
  jQuery("#sab").val(12);
  jQuery("#car").val(24);
+ updateAll();
 }
 
 function updateAll(){
@@ -80,7 +81,11 @@ function updatePericias(){
 }
 
 function displaySpell(spellname){
- jQuery("#descri").load('spells/'+spellname+'.html');
+ if(spellname=="pericias"){
+  jQuery("#descri").html(jQuery("#pericias").html());
+ }else{
+  jQuery("#descri").load('spells/'+spellname+'.html');
+ }
  updateAll();
 };
 
