@@ -40,7 +40,44 @@ function updateAll(){
  jQuery("#pv").html(8+parseInt(jQuery("#con-mod").html())+(parseInt(jQuery("#lvl").val()-1)*(2+parseInt(jQuery("#con-mod").html()))));
  jQuery("#pm").html(parseInt(jQuery("#car-mod").html())+(parseInt(jQuery("#lvl").val())*(6+bonusPm)));
  jQuery("#ca").html(10+parseInt(jQuery("#des-mod").html())+bonusCa+parseInt(jQuery("#bonusMagico").val()));
+
+ //calculando pericias
+ updatePericias();
 };
+
+function updatePericias(){
+ bonusTreino=4;
+ bonusRobe=4;
+ jQuery("#acrobacia").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())));
+ jQuery("#adestramento").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())));
+ jQuery("#atletismo").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#for-mod").html())));
+ jQuery("#atuação").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())));
+ jQuery("#cavalgar").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())));
+ jQuery("#conhecimento").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#int-mod").html())));
+ jQuery("#cura").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#sab-mod").html())));
+ jQuery("#diplomacia").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())));
+ jQuery("#enganacao").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+bonusTreino));
+ jQuery("#fortitude").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#con-mod").html())+bonusRobe));
+ jQuery("#furtividade").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())));
+ jQuery("#guerra").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#int-mod").html())));
+ jQuery("#iniciativa").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())+bonusTreino));
+ jQuery("#intimidacao").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())));
+ jQuery("#investigacao").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#int-mod").html())));
+ jQuery("#intuicao").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#sab-mod").html())));
+ jQuery("#jogatina").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())));
+ jQuery("#ladinagem").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())));
+ jQuery("#luta").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#for-mod").html())));
+ jQuery("#misticismo").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#int-mod").html())+bonusTreino));
+ jQuery("#nobreza").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#int-mod").html())));
+ jQuery("#oficio").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#int-mod").html())));
+ jQuery("#percepcao").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#sab-mod").html())));
+ jQuery("#pilotagem").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())));
+ jQuery("#pontaria").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())));
+ jQuery("#reflexos").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())+bonusRobe));
+ jQuery("#religiao").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#sab-mod").html())));
+ jQuery("#sobrevivencia").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#sab-mod").html())+bonusTreino));
+ jQuery("#vontade").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#sab-mod").html())+bonusTreino+bonusRobe));
+}
 
 function displaySpell(spellname){
  jQuery("#descri").load('spells/'+spellname+'.html');
