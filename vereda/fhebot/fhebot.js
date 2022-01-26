@@ -91,7 +91,7 @@ $(document).ready(function(){
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 2";
   };
 
-  document.getElementById('btn-scene12').onclick = function(){
+  document.getElementById('btn-scene5').onclick = function(){
     stop = true;
     limpeza();
     document.getElementById("0-5").setAttribute("class","fhebot");
@@ -121,7 +121,7 @@ $(document).ready(function(){
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 4";
   };
 
-  document.getElementById('btn-scene5').onclick = function(){
+  document.getElementById('btn-scene12').onclick = function(){
     stop = true;
     limpeza();
     document.getElementById("1-1").setAttribute("class","fhebot");
