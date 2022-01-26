@@ -91,7 +91,7 @@ $(document).ready(function(){
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 2";
   };
 
-  document.getElementById('btn-scene3').onclick = function(){
+  document.getElementById('btn-scene12').onclick = function(){
     stop = true;
     limpeza();
     document.getElementById("0-5").setAttribute("class","fhebot");
@@ -106,7 +106,7 @@ $(document).ready(function(){
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 3";
   };
 
-  document.getElementById('btn-scene4').onclick = function(){
+  document.getElementById('btn-scene11').onclick = function(){
     stop = true;
     limpeza();
     document.getElementById("1-1").setAttribute("class","fhebot");
@@ -211,7 +211,7 @@ $(document).ready(function(){
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 10";
   };
 
-  document.getElementById('btn-scene11').onclick = function(){
+  document.getElementById('btn-scene4').onclick = function(){
     stop = true;
     limpeza();
     document.getElementById("1-1").setAttribute("class","fhebot");
@@ -226,7 +226,7 @@ $(document).ready(function(){
     document.getElementById("labelmapa").innerHTML = "Mapa - Cenário 11";
   };
 
-  document.getElementById('btn-scene12').onclick = function(){
+  document.getElementById('btn-scene3').onclick = function(){
     stop = true;
     limpeza();
     document.getElementById("3-4").setAttribute("class","fhebot");
