@@ -1,36 +1,284 @@
-<!DOCTYPE html>
 <html>
+<meta charset="utf-8"/>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Teste de lógica - Prof Mestre Fernando Hattori</title>
 
-    <title>Teste de Lógica</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="lib/materialize-v1.0.0/css/materialize.min.css"  media="screen,projection"/>
+<link rel="stylesheet" href="projeto.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-
 <body>
-    <main>
-      <section id="solucao" style="max-width: 1200px;">
-
-      </section>
-      <div class="divider"></div>
-      <h5>Dicas</h5>
-      <section id="dicas" style="max-width: 1200px;">
-
-      </section>
-
-    </main>
-
-    <script src="lib/materialize-v1.0.0/js/materialize.min.js"></script>
-    <script src="app/Elemento.js"></script>
-    <script src="app/Regra.js"></script>
-    <script src="app/Teste.js"></script>
-    <script src="app/TesteClassicoController.js"></script>
-    <script>
-        var c = new TesteClassicoController();
-    </script>
+<div class="conteudo">
+ <table>
+  <tr>
+    <th>&nbsp;</th>
+    <th>Casa 1</th>
+    <th>Casa 2</th>
+    <th>Casa 3</th>
+    <th>Casa 4</th>
+    <th>Casa 5</th>
+  </tr>
+  <tr>
+    <td>Cor</td>
+    <td><select id="cor1" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="amarela">Amarela</option>
+        <option value="azul">Azul</option>
+        <option value="branca">Branca</option>
+        <option value="verde">Verde</option>
+        <option value="vermelho">Vermelho</option>
+      </select>
+    </td>
+    <td><select id="cor2" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="amarela">Amarela</option>
+        <option value="azul">Azul</option>
+        <option value="branca">Branca</option>
+        <option value="verde">Verde</option>
+        <option value="vermelho">Vermelho</option>
+      </select>
+    </td>
+    <td><select id="cor3" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="amarela">Amarela</option>
+        <option value="azul">Azul</option>
+        <option value="branca">Branca</option>
+        <option value="verde">Verde</option>
+        <option value="vermelho">Vermelho</option>
+      </select>
+    </td>
+    <td><select id="cor4" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="amarela">Amarela</option>
+        <option value="azul">Azul</option>
+        <option value="branca">Branca</option>
+        <option value="verde">Verde</option>
+        <option value="vermelho">Vermelho</option>
+      </select>
+    </td>
+    <td><select id="cor5" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="amarela">Amarela</option>
+        <option value="azul">Azul</option>
+        <option value="branca">Branca</option>
+        <option value="verde">Verde</option>
+        <option value="vermelho">Vermelho</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Nacionalidade</td>
+    <td><select id="nacionalidade1" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="alemao">Alemão</option>
+        <option value="dinamarques">Dinamarquês</option>
+        <option value="ingles">Inglês</option>
+        <option value="noruegues">Norueguês</option>
+        <option value="sueco">Sueco</option>
+      </select>
+    </td>
+    <td><select id="nacionalidade2" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="alemao">Alemão</option>
+        <option value="dinamarques">Dinamarquês</option>
+        <option value="ingles">Inglês</option>
+        <option value="noruegues">Norueguês</option>
+        <option value="sueco">Sueco</option>
+      </select>
+    </td>
+    <td><select id="nacionalidade3" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="alemao">Alemão</option>
+        <option value="dinamarques">Dinamarquês</option>
+        <option value="ingles">Inglês</option>
+        <option value="noruegues">Norueguês</option>
+        <option value="sueco">Sueco</option>
+      </select>
+    </td>
+    <td><select id="nacionalidade4" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="alemao">Alemão</option>
+        <option value="dinamarques">Dinamarquês</option>
+        <option value="ingles">Inglês</option>
+        <option value="noruegues">Norueguês</option>
+        <option value="sueco">Sueco</option>
+      </select>
+    </td>
+    <td><select id="nacionalidade5" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="alemao">Alemão</option>
+        <option value="dinamarques">Dinamarquês</option>
+        <option value="ingles">Inglês</option>
+        <option value="noruegues">Norueguês</option>
+        <option value="sueco">Sueco</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Bebida</td>
+    <td><select id="bebida1" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="agua">Água</option>
+        <option value="cafe">Café</option>
+        <option value="cerveja">Cerveja</option>
+        <option value="cha">Chá</option>
+        <option value="leite">Leite</option>
+      </select>
+    </td>
+    <td><select id="bebida2" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="agua">Água</option>
+        <option value="cafe">Café</option>
+        <option value="cerveja">Cerveja</option>
+        <option value="cha">Chá</option>
+        <option value="leite">Leite</option>
+      </select>
+    </td>
+    <td><select id="bebida3" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="agua">Água</option>
+        <option value="cafe">Café</option>
+        <option value="cerveja">Cerveja</option>
+        <option value="cha">Chá</option>
+        <option value="leite">Leite</option>
+      </select>
+    </td>
+    <td><select id="bebida4" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="agua">Água</option>
+        <option value="cafe">Café</option>
+        <option value="cerveja">Cerveja</option>
+        <option value="cha">Chá</option>
+        <option value="leite">Leite</option>
+      </select>
+    </td>
+    <td><select id="bebida5" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="agua">Água</option>
+        <option value="cafe">Café</option>
+        <option value="cerveja">Cerveja</option>
+        <option value="cha">Chá</option>
+        <option value="leite">Leite</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Cigarro</td>
+    <td><select id="cigarro1" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="blends">Blends</option>
+        <option value="bluemaster">Bluemaster</option>
+        <option value="dunhill">Dunhill</option>
+        <option value="pallmall">Pall Mall</option>
+        <option value="prince">Prince</option>
+      </select>
+    </td>
+    <td><select id="cigarro2" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="blends">Blends</option>
+        <option value="bluemaster">Bluemaster</option>
+        <option value="dunhill">Dunhill</option>
+        <option value="pallmall">Pall Mall</option>
+        <option value="prince">Prince</option>
+      </select>
+    </td>
+    <td><select id="cigarro3" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="blends">Blends</option>
+        <option value="bluemaster">Bluemaster</option>
+        <option value="dunhill">Dunhill</option>
+        <option value="pallmall">Pall Mall</option>
+        <option value="prince">Prince</option>
+      </select>
+    </td>
+    <td><select id="cigarro4" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="blends">Blends</option>
+        <option value="bluemaster">Bluemaster</option>
+        <option value="dunhill">Dunhill</option>
+        <option value="pallmall">Pall Mall</option>
+        <option value="prince">Prince</option>
+      </select>
+    </td>
+    <td><select id="cigarro5" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="blends">Blends</option>
+        <option value="bluemaster">Bluemaster</option>
+        <option value="dunhill">Dunhill</option>
+        <option value="pallmall">Pall Mall</option>
+        <option value="prince">Prince</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Animal</td>
+    <td><select id="animal1" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="cachorro">Cachorro</option>
+        <option value="cavalo">Cavalo</option>
+        <option value="gato">Gato</option>
+        <option value="passaro">Pássaro</option>
+        <option value="peixe">Peixe</option>
+      </select>
+    </td>
+    <td><select id="animal2" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="cachorro">Cachorro</option>
+        <option value="cavalo">Cavalo</option>
+        <option value="gato">Gato</option>
+        <option value="passaro">Pássaro</option>
+        <option value="peixe">Peixe</option>
+      </select>
+    </td>
+    <td><select id="animal3" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="cachorro">Cachorro</option>
+        <option value="cavalo">Cavalo</option>
+        <option value="gato">Gato</option>
+        <option value="passaro">Pássaro</option>
+        <option value="peixe">Peixe</option>
+      </select>
+    </td>
+    <td><select id="animal4" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="cachorro">Cachorro</option>
+        <option value="cavalo">Cavalo</option>
+        <option value="gato">Gato</option>
+        <option value="passaro">Pássaro</option>
+        <option value="peixe">Peixe</option>
+      </select>
+    </td>
+    <td><select id="animal5" onchange="checkRules()">
+        <option value="null">-</option>
+        <option value="cachorro">Cachorro</option>
+        <option value="cavalo">Cavalo</option>
+        <option value="gato">Gato</option>
+        <option value="passaro">Pássaro</option>
+        <option value="peixe">Peixe</option>
+      </select>
+    </td>
+  </tr>
+</table>
+<br><br>
+<p><b>DICAS</b></p>
+<p class="desativado" id="rule1">O Inglês vive na casa Vermelha.</p>
+<p class="desativado" id="rule2">O Sueco tem Cachorros como animais de estimação.</p>
+<p class="desativado" id="rule3">O Dinamarquês bebe Chá.</p>
+<p class="desativado" id="rule4">A casa Verde fica do lado esquerdo da casa Branca.</p>
+<p class="desativado" id="rule5">O homem que vive na casa Verde bebe Café.</p>
+<p class="desativado" id="rule6">O homem que fuma Pall Mall cria Pássaros.</p>
+<p class="desativado" id="rule7">O homem que vive na casa Amarela fuma Dunhill.</p>
+<p class="desativado" id="rule8">O homem que vive na casa do meio bebe Leite.</p>
+<p class="desativado" id="rule9">O Norueguês vive na primeira casa.</p>
+<p class="desativado" id="rule10">O homem que fuma Blends vive ao lado do que tem Gatos.</p>
+<p class="desativado" id="rule11">O homem que cria Cavalos vive ao lado do que fuma Dunhill.</p>
+<p class="desativado" id="rule12">O homem que fuma Bluemaster bebe Cerveja.</p>
+<p class="desativado" id="rule13">O Alemão fuma Prince.</p>
+<p class="desativado" id="rule14">O Norueguês vive ao lado da casa Azul.</p>
+<p class="desativado" id="rule15">O homem que fuma Blends é vizinho do que bebe Água.</p>
+</div>
+<br><br>
+<p><img style="width:12px;" src="./lisa3.gif"/></p>
+<script src="logica.js"></script>
 </body>
 </html>
