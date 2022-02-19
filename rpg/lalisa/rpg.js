@@ -6,7 +6,7 @@ $( document ).ready(function() {
 });
 
 function resetAll(){
- jQuery("#lvl").val(14);
+ jQuery("#lvl").val(16);
 
  jQuery("#bonusMagico").val(0);
 
@@ -32,7 +32,7 @@ function updateAll(){
  cdbonusArcana=2;
  cdbonusIlusao=2;
  cdbonusEncantamento=4;
- bonusPm=1;
+ bonusPm=2;
  bonusCa=9;
  jQuery("#cd-arcana").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana);
  jQuery("#cd-ilusao").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana+cdbonusIlusao);
