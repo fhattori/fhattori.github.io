@@ -47,7 +47,7 @@ function updateAll(){
 };
 
 function updatePericias(){
- bonusTreino=4;
+ bonusTreino=6;
  bonusRobe=4;
  jQuery("#acrobacia").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#des-mod").html())));
  jQuery("#adestramento").val("/r 1d20+"+(Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())));
