@@ -6,7 +6,7 @@ $( document ).ready(function() {
 });
 
 function resetAll(){
- jQuery("#lvl").val(17);
+ jQuery("#lvl").val(18);
 
  jQuery("#bonusMagico").val(0);
 
@@ -15,7 +15,7 @@ function resetAll(){
  jQuery("#con").val(14);
  jQuery("#int").val(10);
  jQuery("#sab").val(12);
- jQuery("#car").val(24);
+ jQuery("#car").val(30);
  updateAll();
 }
 
@@ -39,7 +39,7 @@ function updateAll(){
  jQuery("#cd-encantamento").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana+cdbonusIlusao+cdbonusEncantamento);
  jQuery("#cd-arcana").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana);
  jQuery("#pv").html(8+parseInt(jQuery("#con-mod").html())+(parseInt(jQuery("#lvl").val()-1)*(2+parseInt(jQuery("#con-mod").html()))));
- jQuery("#pm").html(parseInt(jQuery("#car-mod").html())+(parseInt(jQuery("#lvl").val())*(6+bonusPm)));
+ jQuery("#pm").html(parseInt(jQuery("#car-mod").html())+(parseInt(jQuery("#lvl").val())*(6+bonusPm))-26);
  jQuery("#ca").html(10+parseInt(jQuery("#des-mod").html())+bonusCa+parseInt(jQuery("#bonusMagico").val()));
 
  //calculando pericias
