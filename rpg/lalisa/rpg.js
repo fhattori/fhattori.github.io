@@ -6,7 +6,7 @@ $( document ).ready(function() {
 });
 
 function resetAll(){
- jQuery("#lvl").val(18);
+ jQuery("#lvl").val(19);
 
  jQuery("#bonusMagico").val(0);
 
@@ -29,15 +29,13 @@ function updateAll(){
  jQuery("#car-mod").html('+'+(parseInt(jQuery("#car").val())-10)/2);
 
  //calculando os CDs
- cdbonusArcana=2;
+ cdbonusArcana=6;
  cdbonusIlusao=2;
- cdbonusEncantamento=4;
  bonusPm=2;
- bonusCa=9;
+ bonusCa=10;
  jQuery("#cd-arcana").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana);
  jQuery("#cd-ilusao").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana+cdbonusIlusao);
- jQuery("#cd-encantamento").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana+cdbonusIlusao+cdbonusEncantamento);
- jQuery("#cd-arcana").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana);
+ jQuery("#cd-encantamento").html(10+Math.floor(parseInt(jQuery("#lvl").val())/2)+parseInt(jQuery("#car-mod").html())+cdbonusArcana+cdbonusIlusao);
  jQuery("#pv").html(8+parseInt(jQuery("#con-mod").html())+(parseInt(jQuery("#lvl").val()-1)*(2+parseInt(jQuery("#con-mod").html()))));
  jQuery("#pm").html(parseInt(jQuery("#car-mod").html())+(parseInt(jQuery("#lvl").val())*(6+bonusPm))-26);
  jQuery("#ca").html(10+parseInt(jQuery("#des-mod").html())+bonusCa+parseInt(jQuery("#bonusMagico").val()));
