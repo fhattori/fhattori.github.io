@@ -1,3 +1,40 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td{
+  font-family: 'Schoolbell', arial, sans-serif;
+}
+
+.codigo{
+  font-family: 'Schoolbell', arial, sans-serif;
+}
+
+.conteudo{
+  max-width:1000px;
+  margin-bottom:130px;
+}
+
+.referencias{
+  font-size: 12px;
+}
+
+.recuo {
+  text-indent:4em
+}
+
 .f1_container {
     position: relative;
     margin:10px;
