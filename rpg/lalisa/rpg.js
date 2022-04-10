@@ -6,7 +6,7 @@ $( document ).ready(function() {
 });
 
 function resetAll(){
- jQuery("#lvl").val(19);
+ jQuery("#lvl").val(20);
 
  jQuery("#bonusMagico").val(0);
 
