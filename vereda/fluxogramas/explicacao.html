@@ -1,0 +1,35 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Exercícios sobre fluxogramas - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="fluxogramas.css">
+
+</head>
+<body>
+  <div class="conteudo">
+    <h1>Plano euclidiano</h1>
+    <p>A figura seguinte ilustra um plano euclidiano. A imagem pode ser ampliada
+    clicando no pequeno ícone no canto superior direito.</p>
+    <map name="m1">
+      <area shape="rect" coords="170 5 195 30" href="#img1">
+    </map>
+    <img id="img1" class="img" usemap="#m1" src="./start.png" />
+    <a href="#" class="close"></a>
+    <img class="expand" src="expand.png" />
+    <p>Na horizontal nós temos o eixo X e na vertical temos o eixo Y. Então, qualquer ponto nesse plano pode ser representado
+    por um par de coordenadas (um valor para a coordenada X; e um valor para a coordenada Y). E representamos este par no formato
+    (x;y).</p>
+    <p>Os nosso algoritmos vão controlar um personagem que vai sempre vai começar no ponto (7;7), como ilustrado por um ponto vermelho
+    na figura anterior.</p>
+    <p>Mover para o norte, significa que o personagem vai andar para cima no plano (ou seja, adiciona 1 na posição Y).</p>
+    <img class="img2" src="./norte2.png" />
+    <p>Mover para o sul, significa que o personagem vai andar para baixo no plano (ou seja, subtrai 1 na posição Y).</p>
+    <img class="img2" src="./sul2.png" />
+    <p>Mover para o leste, significa que o personagem vai andar para direita no plano (ou seja, adiciona 1 na posição X).</p>
+    <img class="img2" src="./leste2.png" />
+    <p>Mover para o oeste, significa que o personagem vai andar para a esquerda no plano (ou seja, subtrai 1 na posição X).</p>
+    <img class="img2" src="./oeste2.png" />
+  </div>
+</body>
+</html>
