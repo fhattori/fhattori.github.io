@@ -131,6 +131,10 @@ td{
   color:darkred;
 }
 
+.spell-title-des{
+  color:darkgrey;
+}
+
 .description-hide{
   display:none;
 }
