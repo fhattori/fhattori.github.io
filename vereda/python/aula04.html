@@ -1,0 +1,178 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Python - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="./estilo.css">
+<link rel="stylesheet" href="./prism.css">
+
+</head>
+<body>
+  <div class="conteudo">
+    <h1>Python - aula 3 - loop</h1>
+
+    <p>- Se você quiser usar o python para imprimir todos os números de 1 a 20, o 
+    algoritmo mais simples seria algo assim:
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+    	print("1")
+	print("2")
+	print("3")
+	print("4")
+	print("5")
+	print("6")
+	print("7")
+	print("8")
+	print("9")
+	print("10")
+	print("11")
+	print("12")
+	print("13")
+	print("14")
+	print("15")
+	print("16")
+	print("17")
+	print("18")
+	print("19")
+	print("20")
+    </code></pre>
+    <p>Mas como vocês podem perceber, esse algoritmo é muito longo (tem 20 linhas) e pode demorar um pouco para escrevê-lo.<br>
+    Imagine também que você poder querer todos os números entre 1 e 1 milhão. Seria impraticável escrever um algoritmo inteiro 
+    assim manualmente</p>
+    <p>As linguagens de programação têm soluções para este problema: LOOPS</p>
+    <br><br><br>
+    
+    <p>- O Python tem 2 diferentes opções para criar um loop.
+    </p>
+    <p>
+    A primeira opção é o loop que a gente chama de <code>while</code>.
+    </p>
+    <p>
+    "While" em inglês significa "enquanto". O loop de <code>while</code> cria uma condição e enquanto esta 
+    condição for verdadeira, o loop se repetirá (ou seja, todos os comandos dentro do while será executados novamente).
+    </p>
+    <p>
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+    </code></pre>
+    <br><br><br>
+
+    <p><b>3.</b> Se você executar este código, qual é o resultado impresso nas linhas <code>3</code>, <code>5</code>?<br>
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+      nome = input("Digite o nome: ")
+      sobrenome = input("Digite o sobrenome: ")
+      print("Bem-vindo, Sr(a). "+sobrenome)
+      apelido = input("Como prefere ser chamado? ")
+      print("Perfeito, "+apelido)
+    </code></pre>
+    <p>Considere que o usuário digitará as seguintes respostas:</p>
+    <pre>
+    <code class="language-bash">
+      Digite o nome: Bruce
+      Digite o sobrenome: Wayne
+      Como prefere ser chamado? Batman
+    </code></pre>
+    <br><br><br>
+
+    <p><b>4.</b> Em python, linhas que começam com este caractere <code>#</code> são linhas de comentário, ou seja, servem para o programador<br>
+    descrever detalhes do seu algoritmo, mas o computador nunca executa essas linhas. Levando isso em consideração, qual é o resultado impresso desse algoritmo?
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+      valorA = 7
+      #valorB = valorA-1
+      valorB = valorA
+      print(valorB)
+    </code></pre>
+    <br><br><br>
+
+    <p><b>5.</b> Qual é o resultado impresso desse algoritmo?
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+      a = input("Digite o valor de a: ")
+      b = input("Digite o valor de b: ")
+      resposta = a+b
+      print(resposta)
+    </code></pre>
+    <p>Considere que o usuário digitará as seguintes respostas:</p>
+    <pre>
+    <code class="language-bash">
+      Digite o valor de a: 5
+      Digite o valor de b: 4
+    </code></pre>
+
+    <br><br><br>
+
+    <p><b>5. (corrigindo o algoritmo)</b> O resultado do algoritmo anterior será 54<br>
+    Isso acontece, porque a função <code>input()</code> vai pegar o que o usuário escreve como se fosse um texto.<br>
+    Para fazermos contas matemáticas, precisamos antes transformar este texto em número. E fazemos isto utilizando a função <code>int()</code> ou a função <code>float()</code><br>
+    Então, o algoritmo correto da questão 5 deveria ser:
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+      a = input("Digite o valor de a: ")
+      b = input("Digite o valor de b: ")
+      a = int(a)
+      b = int(b)
+      resposta = a+b
+      print(resposta)
+    </code></pre>
+    <br><br><br>
+
+    <h3>Usando algoritmos e programação para ajudar em problemas matemáticos</h3>
+    <p><b>6.</b> Vamos agora criar um algoritmo que facilite no cálculos dos pares ordenados <code>(x;y)</code> de uma função.<br>
+    Escolhi a seguinte função: <code>f(x) = 2x-1</code>
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+      x = -1
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      #Na linha 3, estamos usando 'str()' para converter o valor das nossas variáveis de números para texto
+      x = -0.75
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      x = -0.5
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      x = -0.25
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      x = 0
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      x = 0.25
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      x = 0.5
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      x = 0.75
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+      x = 1
+      y = 2*x-1
+      print("("+str(x)+";"+str(y)+")")
+    </code></pre>
+    <p>Este algoritmo calcula vários pares ordenados para a função que escolhemos, <code>f(x) = 2x-1</code>. Para fazer isso, 
+    o algoritmo vai calculando o valor de <code>y</code> ou <code>f(x)</code> para cada valor de <code>x</code>. Depois de executar o algoritmo, 
+    podemos usar os pontos resultantes para desenhar o gráfico da função no plano cartesiano.</p>
+    <p>Vocês podem reparar que existe uma repetição de cálculos aqui. As linhas <code>2</code> e <code>3</code> repetem várias vezes e 
+    são exatamente iguais toda vez que elas se repetem. A única coisa que vai mudando é o valor de <code>x</code>. Nas próximas aulas, nós iremos ver como melhorar esse algoritmo.</p>
+    <p>Quais serão os resultados obtidos para cada comando de <code>print</code> desse algoritmo?</p>
+    <p>Como posso calcular o próximo passo ordenado dessa função (<code>x = 1.25</code>)?</p>
+    <br><br><br>
+
+    <p><b>7.</b> Agora você vai fazer o seu próprio algoritmo que calcule os pares ordenados <code>(x;y)</code> de uma função.<br>
+    Escreva o algoritmo para calcular esses pares para a seguinte função: <code>f(x) = 5x+3</code>
+    </p>
+
+  </div>
+<script src="prism.js"></script>
+</body>
+</html>
