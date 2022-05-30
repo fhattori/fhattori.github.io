@@ -1,0 +1,115 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Python - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="./estilo.css">
+<link rel="stylesheet" href="./prism.css">
+
+</head>
+<body>
+  <div class="conteudo">
+    <h1>Python - aula 3 - IF</h1>
+
+    <p>
+    Leia o texto e vá fazendo o código apresentado no site do <a href="https://replit.com">replit.com</a>.
+    </p>
+    <br><br><br>
+    
+    <p>
+    Nesta aula, nós veremos o uso de condicional. Para que serve o condicional? 
+    O condicional é uma maneira de mudar o fluxo do algoritmo dependendo de uma situação.
+    </p>
+    <p>
+    Imagina a situação onde você quer escrever um algoritmo que pergunte a idade de um usuário e se ele for menor de idade, 
+    exibe uma mensagem dizendo que o usuário é menor de idade.
+    </p>
+    Já sabemos como podemos perguntar alguma coisa para o usuário:
+    <p>
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+    idade = input("Digite sua idade: ")
+    </code></pre>
+    <br><br><br>
+    
+    <p>
+    Agora precisamos transformar o que usuário digitar em um número, conforme vimos na aula anterior, 
+    para conseguir usar esse número.
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+    idade = input("Digite sua idade: ")
+    idade = int(idade)
+    </code></pre>
+    <br><br><br>
+
+    <p>
+    Então, nossa variável tem um número e podemos usar o IF para compará-lo com 18 e descobrir se o usuário é menor de idade.
+    </p>
+    <p>
+    Se um usuário é menor, a idade dele deve ser menor que 18.
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+idade = input("Digite sua idade: ")
+idade = int(idade)
+if (idade &lt; 18):
+	print("Usuário menor de idade.")
+    </code></pre>
+    <p>
+    Perceba que o print está deslocado para a direita. Esse deslocamento é feito usando a tecla "Tab" ou "espaço".
+    E esse deslocamento é o que deixa claro para o python que este comando está dentro do IF.
+    </p>
+    <br><br><br>
+
+    <p>
+    Agora podemos adicionar uma mensagem depois do IF dizendo boas-vindas. Mas essa mensagem deve ser exibida 
+    sempre, não importa se o usuário é ou não menor de idade.
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+idade = input("Digite sua idade: ")
+idade = int(idade)
+if (idade &lt; 18):
+ print("Usuário menor de idade.")
+print("Boas-vindas!")
+    </code></pre>
+    <p>
+    Note que o segundo print não tem o espaço no começo, para deixar claro que ele está fora do IF. E, portanto, 
+    será executado independentemente da idade do usuário.
+    </p>
+    <br><br><br>
+
+    <p>
+    Mas e se quisermos colocar uma mensagem caso o usuário seja maior de idade também? Devo
+    adicionar mais um IF depois desse?
+    </p>
+    <p>
+    Na verdade, existe uma maneira mais simples: <code>else</code>. O <code>else</code> em inglês significa "senão". 
+    Usamos o <code>else</code> logo depois de um <code>if</code> e os comandos do <code>else</code> serão executados caso
+    a condição do <code>if</code> seja falsa.
+    </p>
+    <pre class="line-numbers">
+    <code class="language-python">
+idade = input("Digite sua idade: ")
+idade = int(idade)
+if (idade &lt; 18):
+ print("Usuário menor de idade.")
+else:
+ print("Usuário maior de idade.")
+print("Boas-vindas!")
+    </code></pre>
+    <br><br><br>
+
+    <h3>Atividade</h3>
+    <p>
+    Continue o algoritmo que fizemos anterior. Mas agora pergunte para o usuário se ele concordo com os "Termos 
+    e Condições". Caso ele responda "sim", ele recebe a mensagem de boas-vindas. Mas caso ele responda outra coisa, ele 
+    recebe uma mensagem dizendo que não pode acessar a aplicação.
+    </p>
+
+  </div>
+<script src="prism.js"></script>
+</body>
+</html>
