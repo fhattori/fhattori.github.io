@@ -1,0 +1,72 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Scratch - meteoro - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+  <div class="conteudo">
+
+    <p>Sempre antes de começar a mexer no Scratch, faça login no Scratch, clicando em "Entrar" no canto superior direito.<br>
+    <img style="max-width:700px;" src="./intro/login3.png"/></p>
+    <br><br>
+
+    <h1>Meteoros!</h1>
+    <p>Na aula anterior aprendemos um pouco sobre os diferentes tipos de condicional que existem no Scratch e para quê eles servem.<br>
+    Nesta aula, nós vamos começar a criar um projeto de jogo. Nosso jogo se chamará "Meteoros!"<br>
+    No jogo, apareceram meteoros na parte superior da tela e o jogador precisa destruir esses meteoros usando os tiros de uma nave que fica na parte inferior da tela<br>
+    O primeiro passo que faremos é o algoritmo que detecta quando um tiro da nave atingir o meteoro e o tiro causa uma explosão.</p>
+    O nosso objetivo é que o tiro se comporte como este gif:
+    <a href="./condicional/meteoro2.gif"><img style="max-width:700px;" src="./condicional/meteoro2.gif"/></a></p>
+    <br>
+
+    <h3>Atores</h3>
+    <ol>
+      <li>Vamos adicionar os nossos personagens: "Rocks" e "Ball". Podemos alterar os nomes desses atores para "pedra" e "tiro" para ficar mais fácil depois.</li>
+      <li>Diminua o tamanho desses atores para eles ficarem relativamente pequenos na tela.</li>
+      <li>Alteramos o ator "tiro" para ele parece mais um tiro da nossa nave. Eu pintei ela de vermelho e fiz um pequeno fogo na parte de baixo, mas você pode
+    criar o seu tiro da maneira que quiser.</li>
+    </ol>
+    <br>
+ 
+    <h3>Movimentando o tiro</h3>
+    <ol>
+      <li>O tiro funcionará da seguinte maneira: sempre que alguém clicar nele, vamos criar um clone desse tiro e esse clone vai se mover para cima até atingir o final da tela ou a pedra.</li>
+      <li>Para fazer isto, primeiro coloque os seguintes blocos no Ator do tiro:</li>
+      <img style="max-width:700px;" src="./condicional/tiro1.png"/>
+      <li>Para fazer esse clone que criamos se movimentar, adicionamos também o seguintes blocos:</li>
+      <img style="max-width:700px;" src="./condicional/tiro2.png"/>
+      <p><i>Observem que agora estamos usando o bloco de "Repita até que..."<br>
+      E este bloco tem um condicional ("posição Y" &gt; 180).<br>
+      Ou seja, o Scratch executará esse loop até o tiro chegar no topo da tela (onde o Y é maior que 180).
+      </i></p>
+      <li>O último bloco ("apague este clone") serve para apagar o clone do tiro que se movimento até a parte de cima</li>
+    </ol>
+    <br>
+    
+    <h3>Detecção de colisão</h3>
+    <ol>
+      <li>Agora que fizemos o tiro se movimentar até o topo da tela, vamos fazer o tiro explodir se ele atingir a pedra.</li>
+      <li>Crie uma nova fantasia para ator "tiro" que pareça uma pequena explosão.</li>
+      <li>Para fazer isto, altere os que movimentam o tiro para eles ficarem parecidos com isto:</li>
+      <img style="max-width:700px;" src="./condicional/tiro3.png"/>
+      <p><i>Observem que agora estamos usando o bloco "Se ... então" dentro do bloco de "repita"<br>
+      Este bloco checa se o nosso ator encostou (ou colidiu) com a pedra usando um condicional ("tocando em ...")<br>
+      Quando ele encostar, mudamos a fantasia para a fantasia de uma explosão e depois de um tempo, apagamos este clone.
+      </i></p>
+    </ol>
+    <br>
+
+    <h3>Sua tarefa</h3>
+    <ol>
+      <li>Agora que fizemos o tiro detectar que colidiu com a pedra, vamos fazer a deteção também a pedra detectar que o tiro colidiu com ela.</li>
+      <li>Faça então a pedra perceber se o tiro está encostando nela. Se estiver encostando, mude para uma fantasia da pedra explodindo (assim como você com o tiro)</li>
+      <li>Depois de um tempo de explodir, a pedra desaparece e reparece nova em outro lugar.</li>
+      <p>Seu jogo deve parecer algo assim no final desta tarefa:</p>
+      <a href="./condicional/meteoro3.gif"><img style="max-width:700px;" src="./condicional/meteoro3.gif"/></a></p>
+    </ol>
+  </div>
+</body>
+</html>
