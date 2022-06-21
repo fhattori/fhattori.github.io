@@ -1,0 +1,63 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Scratch - meteoro - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+  <div class="conteudo">
+
+    <p>Sempre antes de começar a mexer no Scratch, faça login no Scratch, clicando em "Entrar" no canto superior direito.<br>
+    <img style="max-width:700px;" src="./intro/login3.png"/></p>
+    <br><br>
+
+    <h1>Meteoros!</h1>
+    <p>Na aula aprendemos um pouco sobre os diferentes tipos de blocos de loop que existem no Scratch e para quê eles servem.<br>
+    Agora nós vamos continuar programando o nosso jogo "Meteoros!" e adicionaremos esses blocos.<br>
+    Na primeira parte do jogo, fizemos o algoritmo que detecta quando um tiro da nave atingir o meteoro e o tiro causa uma explosão.</p>
+    Agora nesta segunda parte, nós vamos fazer uma navezinha (que ficará escondendo o ator "tiro") que ficará se movendo na parte inferior da tela e quando for clicada disparará o tiro.</p>
+    <br>
+
+    <h3>Atores</h3>
+    <ol>
+      <li>Vamos adicionar o nosso nov personagem: "Rocket". Ele será a nossa nave.</li>
+      <li>Mude o tamanho da nossa nave para ela ficar pequena, mas não tão pequena, porque ela precisa cobrir o nosso ator do "tiro".</li>
+    </ol>
+    <br>
+ 
+    <h3>Movimentando a nave</h3>
+    <ol>
+      <li>A nave funcionará da seguinte maneira: ela ficará eternamente se movendo da direta para a esquerda no canto inferior da tela.</li>
+      <li>Vimos na aula como fazer algo repetir um movimento para sempre. Como fazemos isso? Adicione esse bloco à nave embaixo de um bloco de "Quando a bandeira verde for clicada":</li>
+      <img style="max-width:700px;" src="./loop/bandeirinhaverde.png"/>
+      <li>Agora dentro do bloco de loop, adicione os blocos de movimento. Pronto, sua nave ficará eternamente se movendo.</li>
+      <img style="max-width:700px;" src="./loop/move.png"/>
+      <li>Agora como mudamos a direção sempre que ele chegar na borda da tela?</li>
+      <li>Se usarmos o bloco "se tocar na borda, volte", o nosso foguete vai subir caso toque na borda de baixo e não queremos isso.</li>
+      <li>Por isso, a melhor solução é usar 2 blocos condicionais para detectar se a nave chegou na borda esquerda ou na borda direita.</li>
+      <img style="max-width:700px;" src="./loop/detectarborda.png"/>
+    </ol>
+    <br>
+    
+    <h3>Fazendo a nave disparar quando clicamos nela</h3>
+    <ol>
+      <li>Para fazer a nave disparar o tiro quando clicamos nela, basta colocar este código na nave:</li>
+      <img style="max-width:700px;" src="./loop/disparar.png"/>
+    </ol>
+    <br>
+
+    <h3>Sua tarefa (tiro seguir a nave)</h3>
+    <ol>
+      <li>Agora que fizemos a nave se mover, quando você clica nela, você vai perceber que o tiro sai 
+        daquele lugar que ele estava paradinho e não da nave. <br>
+        Como fazemos para corrigir isso? Como fazemos para o tiro sair da nave?</li>
+      <li>Faça por conta própria um algoritmo no tiro para ele ficar sempre seguindo a nave.</li>
+      <p><i>Dica: envolve um bloco de loop. ;)</i></p>
+      <p>Seu jogo deve parecer algo assim no final desta tarefa:</p>
+      <a href="./loop/tirinho.gif"><img style="max-width:700px;" src="./loop/tirinho.gif"/></a></p>
+    </ol>
+  </div>
+</body>
+</html>
