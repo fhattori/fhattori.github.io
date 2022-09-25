@@ -1,0 +1,65 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Quiz 8º ano (Python) - Prof Fernando Hattori</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="js/jquery.csv.js"></script>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/radio.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+  <div class="conteudo">
+    <h1>Quiz sobre python - 8º ano</h1>
+    <div id="enunciado">
+      <p>Olá! Bem Vindo ao Quiz Python 3.0!</p>
+      <p>Preste muita atenção na alternativa selecionada antes de clicar em "Próxima".</p>
+      <p>Primeiro, me diga seu nome e turma: </p>
+      <p><input type="text" id="name" name="name" placeholder="Nome completo / ano?"></p>
+      <p>
+    </div>
+
+<form id="alternatives" style="display:none;">
+  <div class="radiobtn">
+    <input type="radio" id="alternative1"
+           name="drone" value="alternative1" />
+    <label id="lb-alt1" for="alternative1">Alt1</label>
+  </div>
+
+  <div class="radiobtn">
+    <input type="radio" id="alternative2"
+           name="drone" value="alternative2" />
+    <label id="lb-alt2" for="alternative2">Alt2</label>
+  </div>
+
+  <div class="radiobtn">
+    <input type="radio" id="alternative3"
+           name="drone" value="alternative3" />
+    <label id="lb-alt3" for="alternative3">Alt3</label>
+  </div>
+
+  <div class="radiobtn">
+    <input type="radio" id="alternative4"
+           name="drone" value="alternative4" />
+    <label id="lb-alt4" for="alternative4">Alt4</label>
+  </div>
+</form>
+      </p>
+      <button id="proximo" type="button" class="slide">
+      <div>Próxima</div><i class="icon-arrow-right"></i></button>
+      <div id="pos-content">
+        <h3>Erros:<label id="erros">0</label></h3>
+        <div id="safeTimer">
+          <p id="safeTimerDisplay">Aguarde <b>60s</b> antes de testar outra alternativa...'</p>
+        </div>
+      </div>
+  </div>
+
+  <script src="js/answers.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
