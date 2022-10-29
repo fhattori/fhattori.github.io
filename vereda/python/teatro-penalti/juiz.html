@@ -1,0 +1,31 @@
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Juíz - Prof Fernando Hattori</title>
+
+<link rel="stylesheet" href="./estilo.css">
+<link rel="stylesheet" href="./prism.css">
+
+</head>
+<body>
+  <div class="boxed-conteudo conteudo">
+    <h2>Juíz</h2>
+    <hr>
+    <h4>Atributos</h4>
+    <p class="atributos"><i>time-cobrando:</i> <input type="text"/></p>
+    <hr>
+    <h4>Métodos</h4>
+    <div class="metodos"><i>ConduzirCobranças:</i> <p>BLOCO COBRANÇA (escolha um dos times (será o <i>time-cobrando</i>), repita 2 vezes):</p>
+    <p class="metodos-inner">Envia mensagens <i>SuaVez</i> para o técnico do <i>time</i> e para o goleiro do outro.</p>
+    <p class="metodos-inner">Quando ambos jogadores estiverem prontos, envia mensagens <i>CobrançaAutorizada</i> para  o bandeirinha e para os 2 jogadores.</p>
+    <p class="metodos-inner">Se o batedor fizer o gol, contabiliza 1 ponto para o <i>time-cobrando</i> (anotar).</p>
+    <p class="metodos-inner">Muda o <i>time-cobrando</i> para o outro.</p>
+    <p>Se o <i>timeX</i> tiver mais pontos que o outro, enviar mensagem <i>VenceuOTime(timeX)</i> para todos.</p>
+    <p>Se o <i>timeY</i> tiver mais pontos que o outro, enviar mensagem <i>VenceuOTime(timeY)</i> para todos.</p>
+    <p>Caso esteja empatado, repetir o BLOCO COBRANÇA até termos um vencedor.</p></div>
+    <br>
+    <div class="metodos"><i>Irregularidade:</i> <p>Ignora a cobrança recém-efetuada e ordene que ela seja repetida enviando a mensagem <i>RepitaCobrança</i> ao técnico do <i>time-cobrando</i>.</p></div>
+  </div>
+<script src="prism.js"></script>
+</body>
+</html>
