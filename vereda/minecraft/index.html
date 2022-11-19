@@ -3,110 +3,41 @@
 <head>
 <title> Minecraft - Prof Fernando Hattori</title>
 
-<link rel="stylesheet" href="binary.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<style>
-.center {
- margin: auto;
- max-width: 1000px;
- padding: 10px;
- font-family: arial,sans-serif;
- }
+<link rel="stylesheet" href="./estilo.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-.image-textunder{
-   margin-bottom:30px;
-   max-width:900px;
- }
-
-.image-withtext{
-   max-width:900px;
- }
-.circle {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  background: #8231f5;
-  color: #000;
-  text-align: center;
-  font: 18px Arial, sans-serif;
-  font-weight: bold;
-}
-</style>
 </head>
 <body>
-<div class="center">
-<h1>Entrando na atividade de programação</h1>
-<p>Para entrar na atividade de programação, você deve primeiro se logar no minecraft education.<br>
-Depois vá clicando nos seguintes menus:</p>
+<div class="conteudo">
+<h1>Minecraft - Hour of Code</h1>
+<p>Para entrar na atividade de programação, você deve primeiro se logar no minecraft education (use seu e-mail e senha do login da escola. Seu e-mail é RA@escolavereda.com.br).</p>
+<p>Depois vá clicando nos seguintes menus:
 <ul>
 <li>Jogar;</li>
 <li>Ver biblioteca;</li>
 <li>Kit de disciplinas;</li>
 <li>Ciência da computação;</li>
-<li>Hora do código;</li>
-<li>Cidade de programação;</li>
+<li>Hour of Code: Escape Estate;</li>
 <li>Criar mundo;</li>
 </ul>
-<p>Assim que o jogo carregar, terá um personagem logo na sua frente. Se movimente para frente, clique nele e clique em "Falar"<br>
-Ele te dará várias opções e você pode escolher qualquer uma. Escolha a palavra em inglês que você preferir.</p>
-<p>Depois, você será transportado para outro mapa. Neste mapa, logo na sua frente terá um painel.<br>
-O objetivo do jogo é colecionar cada um dos pedaços desse painel e montar o quebra-cabeça nesse espaço.</p>
-<img style="max-width:300px;" src="./painel.png"/>
-<p>Para conseguir os pedaços desse painel, você precisa conversar com os outros personagens espalhados ao redor dessa cidade.<br>
-Cada um desses personagens te dará um pequeno desafio que você deve completar programando o seu Agente.<br>
-Para começar o desafio, clique em "start".<br>
-Para programar seu Agente, clique no botão de um robozinho no alto da tela.</p>
-<img style="max-width:45px;" src="./minecraft-robo.png"/>
-<p>Como os textos explicando os desafios estão todos em inglês, coloquei uma explicação de cada um deles logo abaixo.<br>
-<i>A lista de personagens está em ordem alfabética dos seus nomes.</i>
-É uma boa, se você tentar ler e entender os desafios em inglês mesmo. Mas se tiver dificuldades, este guia pode te ajudar.</p>
-<p>Se, por qualquer motivo, o desafio parecer completado e o personagem não abrir a porta para você pegar o pedaço do painel, pode ser que o desafio tenha tido algum bug.<br>
-Para resolver isto, fale de novo com o personagem e clique em "try again" e depois em "start". Isso vai reiniciar o desafio todo, mas deve funcionar para arrumar o bug.</p>
-<p>Depois de resolver todos os desafios, basta colocar todas as peças no painel formando uma imagem e vá mostrar para o professor!</p>
-<br>
-<h3>Os puzzles de cada personagem</h3>
-<img style="max-width:300px;" src="./anne-fala.png"/>
-<img style="max-width:300px;" src="./anne-view.png"/>
-<p>Para ajudar <b>Anne</b>, você deve programar o seu robô para plantar nesse terreno que está perto da personagem.<br>
-Lembre-se que no minecraft, você precisa preparar o terreno antes de plantar alguma coisa.<br></p>
-<br>
-<img style="max-width:300px;" src="./babs-fala.png"/>
-<img style="max-width:300px;" src="./babs-view.png"/>
-<p>Para ajudar <b>Babs</b>, você deve programar o seu robô para coletar todos os vidros que estão espalhados dentro dessa casa perto da personagem.<br>
-Lembre-se se usar o bloco de coletar (collect all), se o seu robô passar sobre um vidro, o vidro vai sumir, mas não vai contar como coletado e pode buggar o desafio.<br></p>
-<br>
-<img style="max-width:300px;" src="./buffy-fala.png"/>
-<img style="max-width:300px;" src="./buffy-view.png"/>
-<p>Para ajudar <b>Buffy</b>, você deve programar o seu robô para construir as paredes nesse quadrado no chão logo ao lado da personagem.<br>
-As paredes precisam ter 3 blocos de altura.</p>
-<br>
-<img style="max-width:300px;" src="./buford-fala.png"/>
-<p>Para ajudar <b>Buford</b>, você deve programar o seu robô andar por este labirinto em espiral que está no chão até o piso amarelo.</p>
-<br>
-<img style="max-width:300px;" src="./chaz-fala.png"/>
-<img style="max-width:300px;" src="./chaz-view.png"/>
-<p>Para ajudar <b>Chaz</b>, você deve programar o seu robô para subir até o teto nesse espaço que ele vai aparecer ao lado do personagem.</p>
-<br>
-<img style="max-width:300px;" src="./howard-fala.png"/>
-<img style="max-width:300px;" src="./howard-view.png"/>
-<p>Para este desafio, depois de iniciá-lo, você precisa olhar para baixo para dentro da casa que você está em cima.<br>
-Para ajudar <b>Howard</b>, você deve programar o seu robô para colocar tochas de redstone nesses quadrados amarelos.<br>
-Tem um bloco de programação responsável por colocar essa tocha. Dica: sempre teste o uso desses blocos antes de começar a programar para entender o que o personagem vai fazer.</p>
-<br>
-<img style="max-width:300px;" src="./leo-fala.png"/>
-<img style="max-width:300px;" src="./leo-view.png"/>
-<p>Para ajudar <b>Leo</b>, você deve programar o seu robô para andar por este caminho por baixo da casa até o piso amarelo dentro da casa.<br>
-Seu Agente pode flutuar à vontade nesse mundo de minecraft, basta usar o bloco de mover para cima.</p>
-<br>
-<img style="max-width:300px;" src="./muffy-fala.png"/>
-<p>Para ajudar <b>Muffy</b>, você deve programar o seu robô para andar até o piso amarelo dentro dessa casa ao lado da personagem.</p>
-<br>
-<img style="max-width:300px;" src="./stew-fala.png"/>
-<img style="max-width:300px;" src="./stew-view.png"/>
-<p>Para ajudar <b>Stew</b>, você deve programar o seu robô tirar uma camada de blocos de areia nesse terreno logo ao lado da casa desse personagem.</p>
-<br>
+</p>
+<p>A opção "Hour of Code: Escape Estate" pode estar escrita em português também ("Hora do código escape da mansão"...). E nessa opção, você verá uma pequena imagem (thumbnail) parecida com isto:</p>
+<img class="figura" src="./splashart-hourofcode2022.png"/>
+<br><br><br>
+<h3>Dicas</h3>
+<p><b>1. </b> Se você estiver fazendo a atividade no ipad, quando o jogo lhe perguntar, naturalmente escolha a opção de entrada via "Controle de Toque" e NÂO escolha a opção "teclado".</p>
+<p><b>2. </b> Sempre escolha a opção "Iniciar Tutorial", porque a opção de pular o tutorial não funciona direito.</p>
+<p><b>3. </b> Quando o jogo lhe perguntar qual linguagem de programação utilizar, escolha a opção "Blocks" (ou "Blocos").</p>
+<a href="./blocks-or-python.png" target="_blank"><img class="figura-small" src="./blocks-or-python.png"/></a>
+<p><b>4. </b> Quando o jogo lhe pedir para clicar em um robozinho, ele está querendo dizer no ícone de robô que fica no parte superior central da tela.</p>
+<p><b>5. </b> Vários dos desafios envolvem deslocar um cursor ou algo parecido. O minecraft hour of code utiliza um código de cores para ilustrar qual direção você deve tomar. Então, se você observar o cursor, ele terá setas coloridas como a figura abaixo.</p>
+<a href="./setas-cursor.png" target="_blank"><img class="figura-small" src="./setas-cursor.png"/></a>
+<p>Então, o seu código deve levar em consideração as cores dessas setas para determinar para onde mover o cursor. Então, por exemplo a programação da figura abaixo move o cursor na direção da seta laranja.</p>
+<a href="./program-cores.png" target="_blank"><img class="figura-small" src="./program-cores.png"/></a>
+<p><b>6. </b> Enquanto você fizer sua programação dentro desse bloco chamado "Ao Iniciar" (ou "on start"). Significa que este seu programa se iniciará no momento que você clicar na seta verde que fica no canto inferior.</p>
+<a href="./seta-start.png" target="_blank"><img class="figura-small" src="./seta-start.png"/></a>
+<br><br><br>
+<h3>Boa sorte na atividade!</h3>
 </div>
-<p><img style="width:12px;" src="./lisa-red.gif"/></p>
 </body>
 </html>
